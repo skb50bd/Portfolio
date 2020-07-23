@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 172 172" style=" fill:#000000;">
+    <g transform="translate(25.8,25.8) scale(0.7,0.7)">
+        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none" stroke="none"></path>
+            <g fill="#f5f5f5" stroke="none">
+                <path d="M15.87305,37.625v96.75h68.98266l2.22559,-10.75h-60.45825v-70.57837l59.125,39.40967l59.125,-39.40967v13.9729c3.37013,-1.5695 6.99825,-2.46091 10.75,-2.49854v-26.89599zM39.00024,48.375h93.49561l-46.7478,31.1687zM155.875,75.25c-4.03125,0 -8.0604,1.6146 -11.2854,4.8396l-47.3042,47.2937l-5.9104,28.4917l28.4917,-5.9104l47.2937,-47.3042c3.225,-3.225 4.8396,-7.25415 4.8396,-11.2854c0,-4.03125 -1.6146,-8.0604 -4.8396,-11.2854c-3.225,-3.225 -7.25415,-4.8396 -11.2854,-4.8396zM155.875,86c1.34375,0 2.6833,0.5417 3.7583,1.6167c2.15,2.15 2.15,5.3666 0,7.5166l-45.1416,45.1521l-9.1438,1.6167l1.6167,-9.1438l45.1521,-45.1416c1.075,-1.075 2.41455,-1.6167 3.7583,-1.6167z"></path>
+            </g>
+        </g>
+    </g>
+</svg>
