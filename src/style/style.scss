@@ -214,7 +214,7 @@ html {
 
             #projects {
                 background-color: $greenLightest;
-                
+
                 .section-header {
                     color: $greenDarkest;
                 }
@@ -268,6 +268,262 @@ html {
                 .section-header {
                     color: $brownDarkest;
                 }
+
+                #skillset {
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+
+                    $li-padding: 0.5rem;
+                    $animation-delay: .5s;
+
+                    @mixin border-radius($radius) {
+                        -webkit-border-radius: $radius;
+                        -moz-border-radius: $radius;
+                        -ms-border-radius: $radius;
+                        border-radius: $radius;
+                    }
+
+                    *,
+                    *:before,
+                    *:after {
+                        margin: 0;
+                        padding: 0;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                    }
+
+                    .skills-bar-container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-content: center;
+                        width: 100%;
+                        max-width: 30rem;
+                        list-style: none;
+
+                        li {
+                            padding: $li-padding;
+                            margin-bottom: 1rem;
+
+                            .progressbar-title {
+                                display: flex;
+                                justify-content: space-between;
+                            }
+
+                            .bar-container {
+                                background: $brownLight;
+                                position: relative;
+                                width: 100%;
+                                height: 5px;
+                                @include border-radius(5px);
+
+                                .progressbar {
+                                    position: absolute;
+                                    width: 0%;
+                                    height: 100%;
+                                    @include border-radius(5px);
+
+                                    -webkit-animation-duration: 2s;
+                                    animation-duration: 2s;
+                                    -webkit-animation-timing-function: ease-out;
+                                    animation-timing-function: ease-out;
+                                    -webkit-animation-fill-mode: both;
+                                    animation-fill-mode: both;
+                                }
+
+                                #progress-html {
+                                    -webkit-animation-name: progress-html;
+                                    animation-name: progress-html;
+                                    -webkit-animation-delay: $animation-delay;
+                                    animation-delay: $animation-delay;
+                                }
+
+                                #progress-css {
+                                    -webkit-animation-name: progress-css;
+                                    animation-name: progress-css;
+                                    -webkit-animation-delay: $animation-delay*2;
+                                    animation-delay: $animation-delay*2;
+                                }
+
+                                #progress-javascript {
+                                    -webkit-animation-name: progress-javascript;
+                                    animation-name: progress-javascript;
+                                    -webkit-animation-delay: $animation-delay*3;
+                                    animation-delay: $animation-delay*3;
+                                }
+
+                                #progress-php {
+                                    -webkit-animation-name: progress-php;
+                                    animation-name: progress-php;
+                                    -webkit-animation-delay: $animation-delay*4;
+                                    animation-delay: $animation-delay*4;
+                                }
+
+                                #progress-angular {
+                                    -webkit-animation-name: progress-angular;
+                                    animation-name: progress-angular;
+                                    -webkit-animation-delay: $animation-delay*5;
+                                    animation-delay: $animation-delay*5;
+                                }
+                            }
+                        }
+                    }
+
+                    .progressbar {
+                        background-color: $brownDarkest;
+                    }
+
+                    @-webkit-keyframes progress-html {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 95%;
+                        }
+                    }
+
+                    @-moz-keyframes progress-html {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 95%;
+                        }
+                    }
+
+                    @keyframes progress-html {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 95%;
+                        }
+                    }
+
+                    @-webkit-keyframes progress-css {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 90%;
+                        }
+                    }
+
+                    @-moz-keyframes progress-css {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 90%;
+                        }
+                    }
+
+                    @keyframes progress-css {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 90%;
+                        }
+                    }
+
+                    @-webkit-keyframes progress-javascript {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 70%;
+                        }
+                    }
+
+                    @-moz-keyframes progress-javascript {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 70%;
+                        }
+                    }
+
+                    @keyframes progress-javascript {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 70%;
+                        }
+                    }
+
+                    @-webkit-keyframes progress-php {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 55%;
+                        }
+                    }
+
+                    @-moz-keyframes progress-php {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 55%;
+                        }
+                    }
+
+                    @keyframes progress-php {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 55%;
+                        }
+                    }
+
+                    @-webkit-keyframes progress-angular {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 65%;
+                        }
+                    }
+
+                    @-moz-keyframes progress-angular {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 65%;
+                        }
+                    }
+
+                    @keyframes progress-angular {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 65%;
+                        }
+                    }
+                }
             }
 
             #experience {
@@ -277,21 +533,38 @@ html {
                     color: $blueDarkest;
                 }
 
+                h2.sub-section-header {
+                    display: block;
+                    text-align: center;
+                    text-decoration: underline;
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+
+                .card {
+                    background-color: $blueLight;
+                    border-radius: 0.5rem;
+                    padding: 2rem;
+                    
+                    &:hover {
+                        @extend .card-hover-effect;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .card {
+                        padding: 1rem;
+                    }
+                }
+
+                #work-experience {
+                    padding: 0;
+                }
+
                 #education {
                     padding: 0;
 
-                    h2.sub-section-header {
-                        display: block;
-                        text-align: center;
-                        text-decoration: underline;
-                        font-size: 2rem;
-                        font-weight: 500;
-                    }
-
                     .card {
-                        background-color: $blueLight;
-                        border-radius: 0.5rem;
-                        padding: 2rem;
 
                         .header {
                             display: flex;
@@ -348,16 +621,6 @@ html {
                             span {
                                 font-size: 1rem;
                             }
-                        }
-
-                        &:hover {
-                            @extend .card-hover-effect;
-                        }
-                    }
-
-                    @media (max-width: 768px) {
-                        .card {
-                            padding: 1rem;
                         }
                     }
                 }

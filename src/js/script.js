@@ -1,16 +1,16 @@
 function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
+    var timeout;
+    return function () {
+        var context = this, args = arguments;
+        var later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
 };
 
 document.addEventListener(
@@ -29,6 +29,26 @@ document.addEventListener(
 
         // Update scroll position for first time
         storeScroll();
+
+        const skills = {
+            html: 95,
+            css: 90,
+            javascript: 70,
+            php: 55,
+            angular: 65
+        };
+
+        let multiply = 4;
+
+        Object.keys(skills).forEach(key => {
+            const delay = 700;
+
+            setTimeout(() => {
+                document.getElementById(key + '-percent').innerHTML = skills[key] + "%";
+            }, delay * multiply);
+
+            multiply++;
+        });
 
         executeAfter(
             () => console.log("This is my awesome portfolio"),
