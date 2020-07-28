@@ -545,9 +545,59 @@ html {
                     background-color: $blueLight;
                     border-radius: 0.5rem;
                     padding: 2rem;
-                    
+
                     &:hover {
                         @extend .card-hover-effect;
+                    }
+
+                    .header {
+                        display: flex;
+                        flex-direction: row;
+                        align-content: center;
+                        flex-wrap: wrap;
+                        padding: 0;
+
+                        img {
+                            height: 2rem;
+                            width: 2rem;
+                            padding-right: 1rem;
+                            align-self: center;
+                        }
+
+                        h3 {
+                            font-size: 1.3rem;
+                            line-height: 0;
+                            font-weight: 500;
+                            overflow-wrap: break-word;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $darkGrey;
+                    }
+
+                    span {
+                        text-align: justify;
+                        text-justify: inter-word;
+                    }
+
+                    .sub-header {
+                        display: flex;
+                        flex-direction: row;
+                        align-content: center;
+                        padding: 1rem 0 0 0;
+
+                        img {
+                            height: 1.3rem;
+                            width: 1.3rem;
+                            padding: 0 0.5rem 0 0;
+                            align-self: center;
+                        }
+
+                        span {
+                            font-size: 1rem;
+                        }
                     }
                 }
 
@@ -559,67 +609,41 @@ html {
 
                 #work-experience {
                     padding: 0;
+
+                    .card {
+                        margin-top: 1rem;
+                        a {
+                            display: flex;
+                            flex-direction: row;
+                            align-content: center;
+
+                            img {
+                                height: 2rem;
+                                width: 2rem;
+                                align-self: center;
+                                padding: 0 0.6rem 0 0;
+                            }
+                            .company {
+                                font-size: 1.7rem;
+                                line-height: 0;
+                                font-weight: 400;
+                            }
+                        }
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                    }
                 }
 
                 #education {
                     padding: 0;
 
                     .card {
-
-                        .header {
-                            display: flex;
-                            flex-direction: row;
-                            align-content: center;
-                            flex-wrap: wrap;
-                            padding: 0;
-
-                            img {
-                                height: 2rem;
-                                width: 2rem;
-                                padding-right: 1rem;
-                                align-self: center;
-                            }
-
-                            h3 {
-                                font-size: 1.3rem;
-                                line-height: 0;
-                                font-weight: 500;
-                                overflow-wrap: break-word;
-                            }
-                        }
-
                         a {
-                            text-decoration: none;
-                            color: $darkGrey;
-
-                            h2#institution {
+                            .institution {
                                 font-size: 1.7rem;
                                 line-height: 0;
                                 font-weight: 400;
-                            }
-                        }
-
-                        span {
-                            font-size: 1.1rem;
-                            text-align: justify;
-                            text-justify: inter-word;
-                        }
-
-                        .sub-header {
-                            display: flex;
-                            flex-direction: row;
-                            align-content: center;
-                            padding: 1rem 0 0 0;
-
-                            img {
-                                height: 1.3rem;
-                                width: 1.3rem;
-                                padding: 0 0.5rem 0 0rem;
-                                align-self: center;
-                            }
-
-                            span {
-                                font-size: 1rem;
                             }
                         }
                     }
