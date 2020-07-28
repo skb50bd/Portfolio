@@ -32,6 +32,7 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
         "Helvetica Neue", sans-serif;
     scroll-behavior: smooth;
+
     body {
         margin: 0;
         padding: 0;
@@ -75,7 +76,7 @@ html {
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 479px) {
             nav {
                 display: none;
             }
@@ -117,6 +118,7 @@ html {
                     background-color: unset !important;
                     box-shadow: unset !important;
                     border: unset !important;
+                    border-radius: 50%;
 
                     a > img {
                         border-radius: 50%;
@@ -139,7 +141,7 @@ html {
                 color: $light;
                 position: relative;
                 top: 0;
-                height: calc(100vh - 7rem);
+                height: calc(100vh - 6rem);
                 min-height: 25rem;
                 display: flex;
                 flex-direction: column;
@@ -188,7 +190,7 @@ html {
                     margin-top: 1rem;
                     background-color: transparent;
                     border: 1px solid $light;
-
+                    border-radius: 0.3rem;
                     a {
                         text-decoration: none;
 
@@ -275,257 +277,35 @@ html {
                 }
 
                 #skillset {
-                    padding: 0;
                     display: flex;
-                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
 
-                    $li-padding: 0.5rem;
-                    $animation-delay: 0.5s;
-
-                    @mixin border-radius($radius) {
-                        -webkit-border-radius: $radius;
-                        -moz-border-radius: $radius;
-                        -ms-border-radius: $radius;
-                        border-radius: $radius;
-                    }
-
-                    *,
-                    *:before,
-                    *:after {
-                        margin: 0;
-                        padding: 0;
-                        -webkit-box-sizing: border-box;
-                        box-sizing: border-box;
-                    }
-
-                    .skills-bar-container {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-content: center;
-                        width: 100%;
+                    .skill {
                         max-width: 30rem;
-                        list-style: none;
+                        width: 100%;
+                        margin-bottom: 1.5rem;
 
-                        li {
-                            padding: $li-padding;
-                            margin-bottom: 1rem;
+                        .skill-header {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
 
-                            .progressbar-title {
-                                display: flex;
-                                justify-content: space-between;
-                            }
-
-                            .bar-container {
-                                background: $brownLight;
-                                position: relative;
-                                width: 100%;
-                                height: 5px;
-                                @include border-radius(5px);
-
-                                .progressbar {
-                                    position: absolute;
-                                    width: 0%;
-                                    height: 100%;
-                                    @include border-radius(5px);
-
-                                    -webkit-animation-duration: 2s;
-                                    animation-duration: 2s;
-                                    -webkit-animation-timing-function: ease-out;
-                                    animation-timing-function: ease-out;
-                                    -webkit-animation-fill-mode: both;
-                                    animation-fill-mode: both;
-                                }
-
-                                #progress-html {
-                                    -webkit-animation-name: progress-html;
-                                    animation-name: progress-html;
-                                    -webkit-animation-delay: $animation-delay;
-                                    animation-delay: $animation-delay;
-                                }
-
-                                #progress-css {
-                                    -webkit-animation-name: progress-css;
-                                    animation-name: progress-css;
-                                    -webkit-animation-delay: $animation-delay * 2;
-                                    animation-delay: $animation-delay * 2;
-                                }
-
-                                #progress-javascript {
-                                    -webkit-animation-name: progress-javascript;
-                                    animation-name: progress-javascript;
-                                    -webkit-animation-delay: $animation-delay * 3;
-                                    animation-delay: $animation-delay * 3;
-                                }
-
-                                #progress-php {
-                                    -webkit-animation-name: progress-php;
-                                    animation-name: progress-php;
-                                    -webkit-animation-delay: $animation-delay * 4;
-                                    animation-delay: $animation-delay * 4;
-                                }
-
-                                #progress-angular {
-                                    -webkit-animation-name: progress-angular;
-                                    animation-name: progress-angular;
-                                    -webkit-animation-delay: $animation-delay * 5;
-                                    animation-delay: $animation-delay * 5;
-                                }
+                            .skill-name {
+                                font-weight: bold;
+                                font-size: large;
                             }
                         }
-                    }
 
-                    .progressbar {
-                        background-color: $brownDarkest;
-                    }
-
-                    @-webkit-keyframes progress-html {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 95%;
-                        }
-                    }
-
-                    @-moz-keyframes progress-html {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 95%;
-                        }
-                    }
-
-                    @keyframes progress-html {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 95%;
-                        }
-                    }
-
-                    @-webkit-keyframes progress-css {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 90%;
-                        }
-                    }
-
-                    @-moz-keyframes progress-css {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 90%;
-                        }
-                    }
-
-                    @keyframes progress-css {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 90%;
-                        }
-                    }
-
-                    @-webkit-keyframes progress-javascript {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 70%;
-                        }
-                    }
-
-                    @-moz-keyframes progress-javascript {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 70%;
-                        }
-                    }
-
-                    @keyframes progress-javascript {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 70%;
-                        }
-                    }
-
-                    @-webkit-keyframes progress-php {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 55%;
-                        }
-                    }
-
-                    @-moz-keyframes progress-php {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 55%;
-                        }
-                    }
-
-                    @keyframes progress-php {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 55%;
-                        }
-                    }
-
-                    @-webkit-keyframes progress-angular {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 65%;
-                        }
-                    }
-
-                    @-moz-keyframes progress-angular {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 65%;
-                        }
-                    }
-
-                    @keyframes progress-angular {
-                        0% {
-                            width: 0%;
-                        }
-
-                        100% {
-                            width: 65%;
+                        .progress-base {
+                            background-color: $brownLight;
+                            border-radius: 0.3rem;
+                            div {
+                                width: 1%;
+                                height: 0.3rem;
+                                background-color: $brownDarkest;
+                                border-radius: 0.3rem;
+                            }
                         }
                     }
                 }
@@ -660,6 +440,7 @@ html {
                 display: flex;
                 flex-direction: column;
                 align-content: center;
+                padding-bottom: 2rem;
 
                 .links {
                     align-self: center;
