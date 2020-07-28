@@ -14,7 +14,7 @@
 <body>
     <nav>
         <ul>
-            <li><a class="active" href="#intro">Intro</a></li>
+            <li><a href="#intro">Intro</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -24,7 +24,7 @@
 
     <main>
         <div id="intro">
-            <img class="avatar" src="assets/avatar.jpg" alt="Shakib Haris" />
+            <img id="avatar" src="assets/avatar.jpg" alt="Shakib Haris" height="8rem"/>
             <span id="name">Shakib Haris</span>
             <span id="short-desc">
                 Full-Stack <b>.NET</b> Developer
@@ -60,7 +60,8 @@
             </span>
 
             <button id="download-resume-button">
-                <a href="assets/shakib-haris-resume.pdf">
+                <a target="_blank"
+                    href="assets/shakib-haris-resume.pdf">
                     <div>
                         <img src="assets/download.svg" /> Resume
                     </div>
@@ -117,13 +118,19 @@
         </div>
 
         <div id="experience">
+            <h1 class="section-header">
+                Experience
+            </h1>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta recusandae deleniti dolorem excepturi et consequuntur, non doloribus enim necessitatibus nulla similique aspernatur expedita nobis quae obcaecati rem maiores dolore tempore ad maxime dolores, nisi voluptatibus. Rem aut enim eos, quae a debitis laboriosam commodi magni voluptatum iure est minima ut numquam repellat ipsam sapiente. In fugit, laboriosam maxime quas explicabo minus assumenda numquam nobis repudiandae non, cupiditate quae, voluptates dignissimos mollitia harum illum similique provident rem? Voluptatem maiores maxime architecto! Odio sint tenetur necessitatibus dolor sit maiores similique porro, molestias distinctio accusantium, deleniti tempora harum eos excepturi nulla? Laboriosam aut facilis veritatis ducimus ullam excepturi sequi, nostrum porro illum in corporis. Sed nemo eaque id, laboriosam reiciendis corporis consequuntur, odit atque rerum aliquid excepturi voluptas, facilis quae facere voluptatem ullam enim ipsum iste dolorem natus magni nisi blanditiis! Provident odio voluptates libero at cum necessitatibus ullam omnis doloribus corporis aspernatur accusamus maiores, voluptate deleniti sequi, facere mollitia eos, distinctio nihil laboriosam temporibus harum dignissimos nobis reiciendis? Porro doloribus consequatur iusto consequuntur amet alias repellat temporibus animi sapiente, quia deserunt facilis est commodi omnis esse architecto cum, in, aliquam reiciendis corrupti distinctio repudiandae. Placeat, eius. Dolorum nihil quae ad minima quia.
         </div>
-    </main>
 
-    <footer id="contact">
-        This is the footer
-    </footer>
+        <div id="contact">
+            <h1 class="section-header">
+                Contact
+            </h1>
+            This is the footer
+        </div>
+    </main>
 
     <script src="js/particles.min.js" defer></script>
     <script src="js/lib.js" defer></script>

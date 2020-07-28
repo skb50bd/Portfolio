@@ -1,17 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Roboto&family=Roboto+Mono&family=Roboto+Slab:wght@300&display=swap');
 
+$darkGrey: #303030;
+$darkerGrey: #404040;
+$darkerGrey2: #454545;
+$light: #f5f5f5;
+
+$greenLightest: #e8f5e9;
+$greenLight: #c8e6c9;
+$greenDarkest: #003300;
+
+$brownLightest: #efebe9;
+$brownLight: #d7ccc8;
+$brownDarkest: #1b0000;
+
+$blueLightest: #e3f2fd;
+$blueLight: #bbdefb;
+$blueDarkest: #002171;
+
+$yellowLightest: #fffde7;
+$yellowLight: #fff9c4;
+$yellowDarkest: #bc5100;
+
 html {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     body {
         margin: 0;
         padding: 0;
-    
+
         nav {
             position: sticky;
             top: 0;
             z-index: 100;
-            background-color: #303030;
+            background-color: $darkGrey;
             box-shadow: 0 0 0.1rem black;
 
             ul {
@@ -26,23 +47,216 @@ html {
 
                 li>a {
                     display: block;
-                    color: #f5f5f5;
+                    color: $light;
                     font-weight: 100;
                     text-align: center;
                     text-decoration: none;
                     text-transform: uppercase;
                     padding: 0.8rem 1rem;
-                
+
                     &.active {
-                        background-color: #404040;
+                        background-color: $darkerGrey;
                     }
 
                     &:hover {
-                        background-color: #454545;
+                        background-color: $darkerGrey2;
                         font-weight: 400;
                     }
                 }
 
+            }
+        }
+
+        @media(max-width: 520px) {
+            nav {
+                display: none;
+            }
+        }
+
+        main {
+            .section-header {
+                text-align: center;
+                display: block;
+                font-size: 4rem;
+                font-weight: 800;
+            }
+
+            div {
+                padding: 2rem;
+                color: $darkGrey;
+
+                text-align: justify;
+                text-justify: inter-word;
+            }
+
+            #intro {
+                background-color: #303030;
+                color: $light;
+                position: relative;
+                top: 0;
+                height: calc(100vh - 7rem);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                @media (max-width: 520px) {
+                    height: 100vh;
+                }
+
+                #avatar {
+                    height: 8rem;
+                    width: 8rem;
+                    border-radius: 50%;
+                    border: 1px solid $light;
+                }
+
+                #name {
+                    font-weight: 100;
+                    font-size: 5rem;
+                    line-height: 0rem;
+                    margin-top: 3rem;
+                    margin-bottom: 3rem;
+                    font-family: 'Julius Sans One', sans-serif;
+                }
+
+                #short-desc {
+                    font-size: 1.5rem;
+                    font-family: 'Roboto Mono';
+                }
+
+                @media(max-width: 520px) {
+                    #name {
+                        font-size: 14vw;
+                        margin-top: 6vw;
+                        margin-bottom: 6vw;
+                    }
+
+                    #short-desc {
+                        font-size: 6vw;
+                    }
+
+                    #avatar {
+                        height: 30vw;
+                        width: 30vw;
+                    }
+                }
+
+
+                #links {
+                    margin-top: 1rem;
+
+                    button {
+                        background-color: unset !important;
+                        box-shadow: unset !important;
+                        border: unset !important;
+
+                        a>img {
+                            border-radius: 50%;
+                            border: 1px solid $light;
+                            height: 2rem;
+                            width: 2rem;
+                            padding: 0.5rem;
+
+                            &:hover {
+                                border: unset;
+                                box-shadow: 1px 1px 0.5rem #000;
+                            }
+                        }
+                    }
+                }
+
+                #download-resume-button {
+                    margin-top: 1rem;
+                    background-color: transparent;
+                    border: 1px solid $light;
+
+                    a {
+                        text-decoration: none;
+                        div {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0.6rem 1rem;
+                            color: $light;
+                            font-family: 'Roboto Mono';
+                            font-size: 1.1rem;
+                            text-transform: uppercase;
+
+                            img {
+                                height: 1.5rem;
+                                width: 1.5rem;
+                                margin-right: 0.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #projects {
+                background-color: $greenLightest;
+
+                .section-header {
+                    color: $greenDarkest;
+                }
+
+                .card-deck {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 1rem;
+
+                    .card {
+                        display: grid;
+                        grid-template-columns: 10rem auto;
+                        padding: 2rem;
+                        border-radius: 0.5rem;
+                        background-color: $greenLight;
+
+                        &:hover {
+                            box-shadow: 1px 1px 4px $greenLight;
+                            transform: scale(1.01);
+                        }
+
+                        .project-image {
+                            height: 8rem;
+                            width: 8rem;
+                            border-radius: 0.5rem;
+                        }
+
+                        .project-description {
+                            justify-content: flex-start;
+                        }
+                    }
+                }
+                @media(max-width: 1080px) {
+                    .card-deck {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+
+            #skills {
+                background-color: $brownLightest;
+
+                .section-header {
+                    color: $brownDarkest;
+                }
+            }
+
+            #experience {
+                background-color: $blueLightest;
+
+                .section-header {
+                    color: $blueDarkest;
+                }
+            }
+
+            #contact {
+                background-color: $yellowLightest;
+
+                .section-header {
+                    color: $yellowDarkest;
+                }
             }
         }
     }
@@ -67,185 +281,6 @@ html {
     -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
     transition: opacity .8s ease, transform 1.4s ease
 } */
-
-#intro, #projects, #skills, #experience {
-    padding: 2rem;
-}
-
-.section-header {
-    text-align: center;
-    display: block;
-    font-size: 4rem;
-    font-weight: 800;
-}
-
-#name {
-    font-weight: 100;
-    font-size: 5rem;
-    line-height: 0rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    font-family: 'Julius Sans One', sans-serif;
-}
-
-#short-desc {
-    font-size: 1.5rem;
-    font-family: 'Roboto Mono';
-}
-
-.avatar {
-    height: 8rem;
-    width: 8rem;
-    border-radius: 50%;
-    border: 1px solid #f5f5f5;
-}
-
-@media(max-width: 520px) {
-    #name {
-        font-size: 14vw;
-        margin-top: 6vw;
-        margin-bottom: 6vw;
-    }
-
-    #short-desc {
-        font-size: 6vw;
-    }
-
-    .avatar {
-        height: 30vw;
-        width: 30vw;
-    }
-
-    nav {
-        display: none;
-    }
-}
-
-#intro {
-    background-color: #303030;
-    color: #f5f5f5;
-    position: relative;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#skills {
-    background-color: #f3e5f5;
-    color: #303030;
-}
-
-#projects {
-    background-color: #e8f5e9;
-}
-
-#experience {
-    background-color: #e3f2fd;
-}
-
-#contact {
-    background-color: #fffde7;
-}
-
-#links {
-    margin-top: 1rem;
-}
-
-#links>button {
-    background-color: unset !important;
-    box-shadow: unset !important;
-    border: unset !important;
-}
-
-#links>button>a>img:hover {
-    border: unset;
-    box-shadow: 1px 1px 0.5rem #000;
-}
-
-#links>button>a>img {
-    border-radius: 50%;
-    border: 1px solid #f5f5f5;
-    height: 2rem;
-    width: 2rem;
-    padding: 0.5rem;
-}
-
-#download-resume-button {
-    margin-top: 1rem;
-    border: 1px solid #f5f5f5;
-    border-radius: 0rem;
-    background-color: unset;
-    padding: 0.6rem 0.5rem 0.3rem 0.5rem;
-}
-#download-resume-button:hover {
-    box-shadow: 1px 1px 0.5rem #000;
-}
-
-#download-resume-button>a {
-    font-weight: 200;
-    font-family: 'Roboto Mono';
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #f5f5f5;
-    text-decoration: none;
-}
-
-#download-resume-button>a>div {
-    display: inline-flex;
-}
-
-#download-resume-button>a>div>img {
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-right: 0.5rem;
-}
-
-.card-deck {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-}
-
-@media(max-width: 1080px) {
-    .card-deck {
-        grid-template-columns: 1fr;
-    }
-}
-
-.card {
-    display: grid;
-    grid-template-columns: 10rem auto;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    background-color: #c8e6c9;
-}
-
-.card:hover {
-    box-shadow: 1px 1px 4px #a5d6a7;
-    /* border: 1px solid #a5d6a7; */
-    transform: scale(1.01);
-}
-
-#projects .section-header {
-    color: #003300;
-}
-
-.project-image {
-    height: 8rem;
-    width: 8rem;
-    border-radius: 0.5rem;
-}
-
-.project-description {
-    justify-content: flex-start;
-}
-
-#skills .section-header {
-    color: #12005e;
-}
 
 /* Width */
 ::-webkit-scrollbar {
