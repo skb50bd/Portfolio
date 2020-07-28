@@ -41,7 +41,7 @@ document.addEventListener(
         let multiply = 4;
 
         Object.keys(skills).forEach(key => {
-            const delay = 700;
+            const delay = 500;
 
             setTimeout(() => {
                 document.getElementById(key + '-percent').innerHTML = skills[key] + "%";
