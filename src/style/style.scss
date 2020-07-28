@@ -652,9 +652,26 @@ html {
 
             #contact {
                 background-color: $yellowLightest;
-
+                
                 .section-header {
                     color: $yellowDarkest;
+                }
+
+                .contact-container {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    img {
+                        height: 30rem;
+                        width: 30rem;
+                        border-radius: 1rem;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
                 }
             }
         }
