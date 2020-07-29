@@ -81,7 +81,6 @@ document.addEventListener(
             observer.observe(section);
         });
 
-        // fixParticlesCanvasHeight();
+        window.onresize =
+                () => loadParticleJs("skill-particles");
     });
-
-document.querySelector('#skills').addEventListener('onresize', () => loadParticleJs("skill-particles"));

@@ -134,82 +134,94 @@ html {
             }
 
             #intro {
-                background-color: #303030;
-                color: $light;
-                position: relative;
-                top: 0;
-                height: calc(100vh - 6rem);
-                min-height: 25rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+                padding: 0;
 
-                #avatar {
-                    height: 8rem;
-                    width: 8rem;
-                    border-radius: 50%;
-                    border: 1px solid $light;
-
-                    &:hover {
-                        transform: scale(1.01) rotate(2deg);
-                        box-shadow: 1px 1px 0.5rem $darkGrey1;
+                #intro-particles {
+                    canvas {
+                        background-color: #303030;
+                        z-index: 1;
+                        width: 100%;
+                        position: absolute;
                     }
                 }
 
-                #name {
-                    font-weight: 500;
-                    font-size: 5rem;
-                    line-height: 0rem;
-                    margin-top: 3rem;
-                    margin-bottom: 3rem;
-                    font-family: "Julius Sans One", sans-serif;
-                }
+                .content {
+                    color: $light;
+                    height: 100vh;
+                    min-height: 25rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10;
+                    position: relative;
 
-                #short-desc {
-                    font-size: 1.5rem;
-                    font-family: "Roboto Mono";
-                }
+                    #avatar {
+                        height: 8rem;
+                        width: 8rem;
+                        border-radius: 50%;
+                        border: 1px solid $light;
 
-                @media (max-width: 768px) {
+                        &:hover {
+                            transform: scale(1.01) rotate(2deg);
+                            box-shadow: 1px 1px 0.5rem $darkGrey1;
+                        }
+                    }
+
                     #name {
-                        font-size: 10vw;
-                        margin-top: 6vw;
-                        margin-bottom: 6vw;
+                        font-weight: 500;
+                        font-size: 5rem;
+                        line-height: 0rem;
+                        margin-top: 3rem;
+                        margin-bottom: 3rem;
+                        font-family: "Julius Sans One", sans-serif;
                     }
 
                     #short-desc {
-                        font-size: 4vw;
+                        font-size: 1.5rem;
+                        font-family: "Roboto Mono";
                     }
 
-                    #avatar {
-                        height: 20vw;
-                        width: 20vw;
+                    @media (max-width: 768px) {
+                        #name {
+                            font-size: 10vw;
+                            margin-top: 6vw;
+                            margin-bottom: 6vw;
+                        }
+
+                        #short-desc {
+                            font-size: 4vw;
+                        }
+
+                        #avatar {
+                            height: 20vw;
+                            width: 20vw;
+                        }
                     }
-                }
 
-                #download-resume-button {
-                    margin-top: 1rem;
-                    background-color: transparent;
-                    border: 1px solid $light;
-                    border-radius: 0.3rem;
-                    a {
-                        text-decoration: none;
+                    #download-resume-button {
+                        margin-top: 1rem;
+                        background-color: transparent;
+                        border: 1px solid $light;
+                        border-radius: 0.3rem;
+                        a {
+                            text-decoration: none;
 
-                        div {
-                            display: inline-flex;
-                            align-items: center;
-                            justify-content: center;
-                            padding: 0.6rem 1rem;
-                            color: $light;
-                            font-family: "Roboto Mono";
-                            font-size: 1.1rem;
-                            text-transform: uppercase;
+                            div {
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 0.6rem 1rem;
+                                color: $light;
+                                font-family: "Roboto Mono";
+                                font-size: 1.1rem;
+                                text-transform: uppercase;
 
-                            img {
-                                height: 1.5rem;
-                                width: 1.5rem;
-                                margin-right: 0.4rem;
+                                img {
+                                    height: 1.5rem;
+                                    width: 1.5rem;
+                                    margin-right: 0.4rem;
+                                }
                             }
                         }
                     }
@@ -341,7 +353,7 @@ html {
                         padding: 1rem;
                     }
                 }
-    
+
                 @media (max-width: 480px) {
                     .content {
                         padding: 0.5rem;
