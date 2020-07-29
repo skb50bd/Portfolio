@@ -24,7 +24,7 @@ const writeSkillLabels = () => {
 }
 
 const resetSkillsProgress = () => {
-    const progresses = document.querySelectorAll(".progress-base>div");
+    const progresses = document.querySelectorAll(".progress-base > div");
     progresses.forEach(progress => progress.style.width = 0 + "%");
 
     const progressValues = document.querySelectorAll(".skill-percent");
@@ -32,7 +32,7 @@ const resetSkillsProgress = () => {
 };
 
 let animatingSkills = false;
-const populateSkills = () => {
+const writeSkillLevels = () => {
     if (animatingSkills) return;
     animatingSkills = true;
 
@@ -45,9 +45,9 @@ const populateSkills = () => {
         delay += percent * 5;
         setTimeout(
             () => animateBar(
-                skill.querySelector(".progress-base>div"),
+                skill.querySelector(".progress-base > div"),
                 percent,
-                () => skill.getElementsByClassName("skill-percent")[0].innerHTML = percent + "%"),
+                () => skill.querySelector(".skill-percent").innerHTML = percent + "%"),
             delay);
     });
 
@@ -58,7 +58,7 @@ document.addEventListener(
     'DOMContentLoaded',
     () => {
         writeSkillLabels();
-        populateSkills();
+        writeSkillLevels();
         // loadParticleJs("particles");
 
         const observer = new IntersectionObserver(entries => {
@@ -66,9 +66,9 @@ document.addEventListener(
                 const id = entry.target.getAttribute('id');
                 if (entry.intersectionRatio > 0) {
                     document.querySelector(`nav li a[href="#${id}"]`).classList.add('active');
-                    if (id === "skills") {
+                    if (id === "skills" && !animatingSkills) {
                         resetSkillsProgress();
-                        populateSkills();
+                        writeSkillLevels();
                     }
                 } else {
                     document.querySelector(`nav li a[href="#${id}"]`).classList.remove('active');
