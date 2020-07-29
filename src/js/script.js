@@ -24,6 +24,7 @@ const writeSkillLabels = () => {
 }
 
 const resetSkillsProgress = () => {
+    if (animatingSkills) return;
     const progresses = document.querySelectorAll(".progress-base > div");
     progresses.forEach(progress => progress.style.width = 0 + "%");
 
