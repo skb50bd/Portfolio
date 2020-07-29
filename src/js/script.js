@@ -60,7 +60,7 @@ document.addEventListener(
     () => {
         writeSkillLabels();
         writeSkillLevels();
-        // loadParticleJs("particles");
+        loadParticleJs("skill-particles");
 
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -80,4 +80,8 @@ document.addEventListener(
         document.querySelectorAll('section[id]').forEach(section => {
             observer.observe(section);
         });
+
+        // fixParticlesCanvasHeight();
     });
+
+document.querySelector('#skills').addEventListener('onresize', () => loadParticleJs("skill-particles"));

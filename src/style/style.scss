@@ -19,9 +19,9 @@ $blueLightest: #e3f2fd;
 $blueLight: #bbdefb;
 $blueDarkest: #002171;
 
-$yellowLightest: #fffde7;
-$yellowLight: #fff9c4;
-$yellowDarkest: #bc5100;
+$orangeLightest: #fbe9e7;
+$orangeLight: #ffccbc;
+$orangeDarkest: #870000;
 
 .card-hover-effect {
     box-shadow: 1px 1px 4px $lightGrey;
@@ -93,9 +93,6 @@ html {
             section {
                 padding: 2rem;
                 color: $darkGrey1;
-
-                text-align: justify;
-                text-justify: inter-word;
             }
 
             @media (max-width: 768px) {
@@ -153,7 +150,7 @@ html {
                     width: 8rem;
                     border-radius: 50%;
                     border: 1px solid $light;
-                    
+
                     &:hover {
                         transform: scale(1.01) rotate(2deg);
                         box-shadow: 1px 1px 0.5rem $darkGrey1;
@@ -276,49 +273,78 @@ html {
 
             #skills {
                 background-color: $brownLightest;
+                padding: 0;
 
-                .section-header {
-                    color: $brownDarkest;
+                #skill-particles {
+                    canvas {
+                        z-index: 1;
+                        width: 100%;
+                        position: absolute;
+                    }
                 }
 
-                #skillset {
-                    padding: 0;
-                    margin: 0;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                .content {
+                    padding: 2rem;
+                    z-index: 10;
+                    position: relative;
 
-                    .skill {
-                        max-width: 30rem;
-                        width: 100%;
-                        margin-bottom: 1.5rem;
+                    .section-header {
+                        color: $brownDarkest;
+                    }
 
-                        .skill-header {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: space-between;
+                    #skillset {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
 
-                            .skill-name {
-                                font-weight: bold;
-                                font-size: large;
-                                font-family: 'Roboto Mono';
+                        .skill {
+                            max-width: 30rem;
+                            width: 100%;
+                            margin-bottom: 1.5rem;
+
+                            .skill-header {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+
+                                .skill-name {
+                                    font-weight: bold;
+                                    font-size: large;
+                                    color: $brownDarkest;
+                                    font-family: "Roboto Mono";
+                                }
+
+                                .skill-percent {
+                                    font-family: "Roboto Mono";
+                                    color: $brownDarkest;
+                                }
                             }
 
-                            .skill-percent {
-                                font-family: 'Roboto Mono';
-                            }
-                        }
-
-                        .progress-base {
-                            background-color: $brownLight;
-                            border-radius: 0.3rem;
-                            div {
-                                width: 1%;
-                                height: 0.3rem;
-                                background-color: $brownDarkest;
+                            .progress-base {
+                                background-color: $brownLight;
                                 border-radius: 0.3rem;
+                                div {
+                                    width: 1%;
+                                    height: 0.3rem;
+                                    background-color: $brownDarkest;
+                                    border-radius: 0.3rem;
+                                }
                             }
                         }
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .content {
+                        padding: 1rem;
+                    }
+                }
+    
+                @media (max-width: 480px) {
+                    .content {
+                        padding: 0.5rem;
                     }
                 }
             }
@@ -448,7 +474,7 @@ html {
             }
 
             #contact {
-                background-color: $yellowLightest;
+                background-color: $orangeLightest;
                 display: flex;
                 flex-direction: column;
                 align-content: center;
@@ -457,12 +483,12 @@ html {
                 .links {
                     align-self: center;
                     button > a > img {
-                        background-color: $yellowDarkest;
+                        background-color: $orangeDarkest;
                     }
                 }
 
                 .section-header {
-                    color: $yellowDarkest;
+                    color: $orangeDarkest;
                 }
 
                 .contact-container {
@@ -478,10 +504,10 @@ html {
                         width: 15rem;
                         border-radius: 0.5rem;
                         justify-self: center;
-                        
+
                         &:hover {
-                            transform: scale(1.01) rotate(2deg);
-                            box-shadow: 1px 1px 0.5rem $darkGrey1;
+                            transform: scale(1.01) rotate(-1deg);
+                            box-shadow: 1px 1px 0.5rem $orangeLight;
                         }
                     }
 
@@ -493,7 +519,7 @@ html {
 
                         .content-name {
                             font-size: large;
-                            color: $yellowDarkest;
+                            color: $orangeDarkest;
                             margin-top: 0.5rem;
 
                             &:first-child {
@@ -526,6 +552,11 @@ html {
                             align-content: center;
                         }
                     }
+                }
+                #footer-copyright {
+                    text-align: center;
+                    margin-top: 2rem;
+                    color: $orangeDarkest;
                 }
             }
         }
