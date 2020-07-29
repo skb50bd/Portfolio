@@ -153,6 +153,11 @@ html {
                     width: 8rem;
                     border-radius: 50%;
                     border: 1px solid $light;
+                    
+                    &:hover {
+                        transform: scale(1.01) rotate(2deg);
+                        box-shadow: 1px 1px 0.5rem $darkGrey1;
+                    }
                 }
 
                 #name {
@@ -296,6 +301,10 @@ html {
                             .skill-name {
                                 font-weight: bold;
                                 font-size: large;
+                                font-family: 'Roboto Mono';
+                            }
+
+                            .skill-percent {
                                 font-family: 'Roboto Mono';
                             }
                         }
@@ -467,8 +476,13 @@ html {
                         margin: 0 1rem 1rem 1rem;
                         height: 15rem;
                         width: 15rem;
-                        border-radius: 1rem;
+                        border-radius: 0.5rem;
                         justify-self: center;
+                        
+                        &:hover {
+                            transform: scale(1.01) rotate(2deg);
+                            box-shadow: 1px 1px 0.5rem $darkGrey1;
+                        }
                     }
 
                     .content {

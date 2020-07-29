@@ -1,4 +1,12 @@
-const animateBar = (element, to) => {
+const GOLDEN_ANGLE = 137.508;
+
+const getHue = index =>
+    Math.floor((index * GOLDEN_ANGLE) % 360.0);
+
+const getColor = index =>
+    `hsla(${getHue(index)}, 100%, 40%, 1)`;
+
+const animateBar = (element, maxWidth, callback) => {
     let i = 0;
     let interval = 10;
     function move() {
@@ -7,9 +15,9 @@ const animateBar = (element, to) => {
             let width = 1;
             let id = setInterval(frame, interval);
             function frame() {
-                if (width >= to) {
+                if (width >= maxWidth) {
                     clearInterval(id);
-                    i = 0;
+                    callback();
                 } else {
                     width++;
                     element.style.width = width + "%";
@@ -20,9 +28,17 @@ const animateBar = (element, to) => {
     move();
 };
 
+const writeSkillLabels = () => {
+    const skills = document.querySelectorAll("#skillset .skill");
+    skills.forEach(skill => skill.querySelector(".skill-name").innerHTML = skill.dataset.skillName);
+}
+
 const resetSkillsProgress = () => {
     const progresses = document.querySelectorAll(".progress-base>div");
     progresses.forEach(progress => progress.style.width = 0 + "%");
+
+    const progressValues = document.querySelectorAll(".skill-percent");
+    progressValues.forEach(elem => elem.innerHTML = "");
 };
 
 let animatingSkills = false;
@@ -31,28 +47,27 @@ const populateSkills = () => {
     animatingSkills = true;
 
     const skills = document.querySelectorAll("#skillset .skill");
+    let delay = 0;
 
-    skills.forEach((skill, index) => {
-        const name = skill.dataset.skillName;
+    skills.forEach(skill => {
         const percent = skill.dataset.skillPercent;
 
-        skill.getElementsByClassName("skill-name")[0].innerHTML = name;
-
+        delay += percent * 5;
         setTimeout(
-            () => animateBar(skill.querySelector(".progress-base>div"), percent), 
-            index * percent * 5);
-
-        setTimeout(
-            () => skill.getElementsByClassName("skill-percent")[0].innerHTML = percent + "%", 
-            (index + 1) * percent * 5);
+            () => animateBar(
+                skill.querySelector(".progress-base>div"), 
+                percent, 
+                () => skill.getElementsByClassName("skill-percent")[0].innerHTML = percent + "%"), 
+            delay);
     });
 
-    setTimeout(() => animatingSkills = false, skills.length * 500);
+    setTimeout(() => animatingSkills = false, delay);
 };
 
 document.addEventListener(
     'DOMContentLoaded',
     () => {
+        writeSkillLabels();
         populateSkills();
         // loadParticleJs("particles");
 
