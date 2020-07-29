@@ -1,3 +1,5 @@
+import { mountSkillParticles, removeSkillParticles, mountIntroParticles, removeIntroParticles } from "./particle-anims.js";
+
 const animateBar = (element, maxWidth, callback) => {
     const interval = 10;
 
@@ -58,15 +60,18 @@ const writeSkillLevels = () => {
 document.addEventListener(
     'DOMContentLoaded',
     () => {
+        mountIntroParticles();
+        mountSkillParticles();
+
         writeSkillLabels();
         writeSkillLevels();
-        loadParticleJs("skill-particles");
 
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 const id = entry.target.getAttribute('id');
                 if (entry.intersectionRatio > 0) {
                     document.querySelector(`nav li a[href="#${id}"]`).classList.add('active');
+                    
                     if (id === "skills" && !animatingSkills) {
                         resetSkillsProgress();
                         writeSkillLevels();
@@ -82,5 +87,5 @@ document.addEventListener(
         });
 
         window.onresize =
-                () => loadParticleJs("skill-particles");
+            () => loadParticleJs("skill-particles");
     });

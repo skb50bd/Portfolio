@@ -8,7 +8,7 @@
             }
         },
         "color": {
-            "value": "#bcaaa4"
+            "value": "#d7ccc8"
         },
         "shape": {
             "type": "polygon",
@@ -26,7 +26,7 @@
             }
         },
         "opacity": {
-            "value": 0.3,
+            "value": 0.2,
             "random": true,
             "anim": {
                 "enable": false,

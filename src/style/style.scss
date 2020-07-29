@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Roboto&family=Roboto+Mono&family=Roboto+Slab:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Roboto+Slab:wght@500&display=swap");
 
 $lightGrey: #e0e0e0;
 $darkestGrey: #252525;
@@ -54,7 +54,7 @@ html {
                 align-content: center;
                 align-self: center;
 
-                li > a {
+                li>a {
                     display: block;
                     color: $light;
                     font-weight: 100;
@@ -117,7 +117,7 @@ html {
                     border: unset !important;
                     border-radius: 50%;
 
-                    a > img {
+                    a>img {
                         border-radius: 50%;
                         border: 1px solid $light;
                         height: 2rem;
@@ -135,6 +135,7 @@ html {
 
             #intro {
                 padding: 0;
+                background-color: $darkGrey1;
 
                 #intro-particles {
                     canvas {
@@ -174,7 +175,8 @@ html {
                         line-height: 0rem;
                         margin-top: 3rem;
                         margin-bottom: 3rem;
-                        font-family: "Julius Sans One", sans-serif;
+                        font-family: "Roboto Slab", sans-serif;
+                        text-transform: uppercase;
                     }
 
                     #short-desc {
@@ -204,6 +206,7 @@ html {
                         background-color: $darkestGrey;
                         border: 1px solid $light;
                         border-radius: 0.3rem;
+
                         a {
                             text-decoration: none;
 
@@ -232,6 +235,7 @@ html {
                     }
                 }
             }
+
             @media (max-width: 768px) {
                 #intro {
                     height: 100vh;
@@ -342,12 +346,17 @@ html {
                             .progress-base {
                                 background-color: $brownLight;
                                 border-radius: 0.3rem;
+
                                 div {
                                     width: 1%;
                                     height: 0.3rem;
                                     background-color: $brownDarkest;
                                     border-radius: 0.3rem;
                                 }
+                            }
+
+                            &:hover {
+                                transform: scale(1.01);
                             }
                         }
                     }
@@ -452,6 +461,7 @@ html {
 
                     .card {
                         margin-top: 1rem;
+
                         a {
                             display: flex;
                             flex-direction: row;
@@ -463,12 +473,14 @@ html {
                                 align-self: center;
                                 padding: 0 0.6rem 0 0;
                             }
+
                             .company {
                                 font-size: 1.7rem;
                                 line-height: 0;
                                 font-weight: 400;
                             }
                         }
+
                         &:first-child {
                             margin-top: 0;
                         }
@@ -499,8 +511,10 @@ html {
 
                 .links {
                     align-self: center;
-                    button > a > img {
+
+                    button>a>img {
                         background-color: $orangeDarkest;
+                        border: unset;
                     }
                 }
 
@@ -570,6 +584,7 @@ html {
                         }
                     }
                 }
+
                 #footer-copyright {
                     text-align: center;
                     margin-top: 2rem;
