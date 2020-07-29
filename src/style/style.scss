@@ -12,7 +12,8 @@ $greenLight: #c8e6c9;
 $greenDarkest: #003300;
 
 $brownLightest: #efebe9;
-$brownLight: #d7ccc8;
+$brownLighter: #d7ccc8;
+$brownLight: #bcaaa4;
 $brownDarkest: #1b0000;
 
 $blueLightest: #e3f2fd;
@@ -104,6 +105,10 @@ html {
             @media (max-width: 480px) {
                 section {
                     padding: 0.5rem;
+
+                    .section-header {
+                        font-size: 3rem;
+                    }
                 }
             }
 

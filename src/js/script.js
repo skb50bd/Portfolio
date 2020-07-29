@@ -1,12 +1,11 @@
-import { mountSkillParticles, removeSkillParticles, mountIntroParticles, removeIntroParticles } from "./particle-anims.js";
+import { mountSkillParticles, mountIntroParticles, adjustCanvasHeights } from "./particle-anims.js";
 
 const animateBar = (element, maxWidth, callback) => {
     const interval = 10;
 
-    function move() {
+    const move = () => {
         let width = 1;
-        const id = setInterval(frame, interval);
-        function frame() {
+        const frame = () => {
             if (width >= maxWidth) {
                 clearInterval(id);
                 callback();
@@ -15,6 +14,7 @@ const animateBar = (element, maxWidth, callback) => {
                 element.style.width = width + "%";
             }
         }
+        const id = setInterval(frame, interval);
     }
 
     move();
@@ -57,6 +57,22 @@ const writeSkillLevels = () => {
     setTimeout(() => animatingSkills = false, delay);
 };
 
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        if (entry.intersectionRatio > 0) {
+            document.querySelector(`nav li a[href="#${id}"]`).classList.add('active');
+            
+            if (id === "skills" && !animatingSkills) {
+                resetSkillsProgress();
+                writeSkillLevels();
+            }
+        } else {
+            document.querySelector(`nav li a[href="#${id}"]`).classList.remove('active');
+        }
+    });
+});
+
 document.addEventListener(
     'DOMContentLoaded',
     () => {
@@ -66,26 +82,9 @@ document.addEventListener(
         writeSkillLabels();
         writeSkillLevels();
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                const id = entry.target.getAttribute('id');
-                if (entry.intersectionRatio > 0) {
-                    document.querySelector(`nav li a[href="#${id}"]`).classList.add('active');
-                    
-                    if (id === "skills" && !animatingSkills) {
-                        resetSkillsProgress();
-                        writeSkillLevels();
-                    }
-                } else {
-                    document.querySelector(`nav li a[href="#${id}"]`).classList.remove('active');
-                }
-            });
-        });
-
         document.querySelectorAll('section[id]').forEach(section => {
             observer.observe(section);
         });
 
-        window.onresize =
-            () => loadParticleJs("skill-particles");
+        window.onresize = adjustCanvasHeights;
     });

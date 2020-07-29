@@ -9,6 +9,11 @@ const adjustSkillParticlesCanvasHeight = () =>
 const adjustIntroParticlesCanvasHeight = () => 
     adjustParticlesCanvasHeight("intro-particles");
 
+export const adjustCanvasHeights = () => {
+    adjustSkillParticlesCanvasHeight();
+    adjustIntroParticlesCanvasHeight();
+}
+
 export const mountSkillParticles = () => 
     particlesJS.load(
         "skill-particles",
