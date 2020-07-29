@@ -277,6 +277,8 @@ html {
                 }
 
                 #skillset {
+                    padding: 0;
+                    margin: 0;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -294,6 +296,7 @@ html {
                             .skill-name {
                                 font-weight: bold;
                                 font-size: large;
+                                font-family: 'Roboto Mono';
                             }
                         }
 
