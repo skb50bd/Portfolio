@@ -8,7 +8,7 @@
             }
         },
         "color": {
-            "value": "#d7ccc8"
+            "value": "#bcaaa4"
         },
         "shape": {
             "type": "polygon",
@@ -17,7 +17,7 @@
                 "color": "#000"
             },
             "polygon": {
-                "nb_sides": 6
+                "nb_sides": 4
             },
             "image": {
                 "src": "img/github.svg",

@@ -123,11 +123,11 @@ html {
                         height: 2rem;
                         width: 2rem;
                         padding: 0.5rem;
-                        background-color: $darkGrey1;
+                        background-color: $darkestGrey;
 
                         &:hover {
-                            border: unset;
-                            box-shadow: 1px 1px 0.5rem $darkestGrey;
+                            transform: scale(1.01);
+                            box-shadow: 1px 1px 0.5rem black;
                         }
                     }
                 }
@@ -138,7 +138,7 @@ html {
 
                 #intro-particles {
                     canvas {
-                        background-color: #303030;
+                        background-color: $darkGrey1;
                         z-index: 1;
                         width: 100%;
                         position: absolute;
@@ -201,7 +201,7 @@ html {
 
                     #download-resume-button {
                         margin-top: 1rem;
-                        background-color: transparent;
+                        background-color: $darkestGrey;
                         border: 1px solid $light;
                         border-radius: 0.3rem;
                         a {
@@ -211,7 +211,7 @@ html {
                                 display: inline-flex;
                                 align-items: center;
                                 justify-content: center;
-                                padding: 0.6rem 1rem;
+                                padding: 0.5rem 0.5rem;
                                 color: $light;
                                 font-family: "Roboto Mono";
                                 font-size: 1.1rem;
@@ -223,6 +223,11 @@ html {
                                     margin-right: 0.4rem;
                                 }
                             }
+                        }
+
+                        &:hover {
+                            transform: scale(1.05);
+                            box-shadow: 1px 1px 0.5rem black;
                         }
                     }
                 }
