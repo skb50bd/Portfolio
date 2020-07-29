@@ -1,30 +1,20 @@
-const GOLDEN_ANGLE = 137.508;
-
-const getHue = index =>
-    Math.floor((index * GOLDEN_ANGLE) % 360.0);
-
-const getColor = index =>
-    `hsla(${getHue(index)}, 100%, 40%, 1)`;
-
 const animateBar = (element, maxWidth, callback) => {
-    let i = 0;
-    let interval = 10;
+    const interval = 10;
+
     function move() {
-        if (i == 0) {
-            i = 1;
-            let width = 1;
-            let id = setInterval(frame, interval);
-            function frame() {
-                if (width >= maxWidth) {
-                    clearInterval(id);
-                    callback();
-                } else {
-                    width++;
-                    element.style.width = width + "%";
-                }
+        let width = 1;
+        const id = setInterval(frame, interval);
+        function frame() {
+            if (width >= maxWidth) {
+                clearInterval(id);
+                callback();
+            } else {
+                width++;
+                element.style.width = width + "%";
             }
         }
     }
+
     move();
 };
 
@@ -55,9 +45,9 @@ const populateSkills = () => {
         delay += percent * 5;
         setTimeout(
             () => animateBar(
-                skill.querySelector(".progress-base>div"), 
-                percent, 
-                () => skill.getElementsByClassName("skill-percent")[0].innerHTML = percent + "%"), 
+                skill.querySelector(".progress-base>div"),
+                percent,
+                () => skill.getElementsByClassName("skill-percent")[0].innerHTML = percent + "%"),
             delay);
     });
 
