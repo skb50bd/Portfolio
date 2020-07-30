@@ -1,0 +1,56 @@
+# HTML
+# Archive your static HTML project and save it with the build record.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+
+- task: UseNode@1
+  inputs:
+    checkLatest: true
+
+- script: npm install
+  displayName: 'npm install'
+
+- script: npm install -g sass
+  displayName: 'npm install sass'
+
+- script: sass ./src/style/style.scss:./src/css/style.css --no-source-map
+  displayName: 'npm compile scss'
+
+- task: CopyFiles@2
+  displayName: 'Copy Files for Archiving'
+  inputs:
+    Contents: |
+      src/**
+      !src/style/**
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/dist'
+    CleanTargetFolder: true
+
+- task: ArchiveFiles@2
+  displayName: 'Archive Files'
+  inputs:
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/dist/src'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+- task: DeleteFiles@1
+  inputs:
+    SourceFolder: '$(Build.ArtifactStagingDirectory)/dist'
+    Contents: '**'
+    RemoveSourceFolder: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
