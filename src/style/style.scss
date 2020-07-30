@@ -55,41 +55,50 @@ $orangeDarkest: #870000;
     0% {
         transform: translate(1px, 1px) rotate(0deg);
     }
+
     10% {
         transform: translate(-1px, -2px) rotate(-1deg);
     }
+
     20% {
         transform: translate(-3px, 0px) rotate(1deg);
     }
+
     30% {
         transform: translate(3px, 2px) rotate(0deg);
     }
+
     40% {
         transform: translate(1px, -1px) rotate(1deg);
     }
+
     50% {
         transform: translate(-1px, 2px) rotate(-1deg);
     }
+
     60% {
         transform: translate(-3px, 1px) rotate(0deg);
     }
+
     70% {
         transform: translate(3px, 1px) rotate(-1deg);
     }
+
     80% {
         transform: translate(-1px, -1px) rotate(1deg);
     }
+
     90% {
         transform: translate(1px, 2px) rotate(0deg);
     }
+
     100% {
         transform: translate(1px, -2px) rotate(-1deg);
     }
 }
 
 html {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-        "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     scroll-behavior: smooth;
 
     body {
@@ -118,7 +127,7 @@ html {
                 align-content: center;
                 align-self: center;
 
-                li > a {
+                li>a {
                     display: block;
                     color: $light;
                     font-weight: 100;
@@ -179,7 +188,7 @@ html {
                     border: unset !important;
                     border-radius: 50%;
 
-                    a > img {
+                    a>img {
                         border-radius: 50%;
                         border: 1px solid $light;
                         height: 2rem;
@@ -198,6 +207,7 @@ html {
             #intro {
                 padding: 0;
                 background-color: $darkGrey1;
+
                 @media (max-width: 768px) {
                     height: 100vh;
                 }
@@ -227,6 +237,7 @@ html {
                         width: 8rem;
                         border-radius: 50%;
                         border: 1px solid $light;
+
                         @media (max-width: 768px) {
                             height: 20vw;
                             width: 20vw;
@@ -246,6 +257,7 @@ html {
                         margin-bottom: 3rem;
                         font-family: "Roboto Slab", sans-serif;
                         text-transform: uppercase;
+
                         @media (max-width: 768px) {
                             font-size: 10vw;
                             margin-top: 6vw;
@@ -256,6 +268,7 @@ html {
                     #short-desc {
                         font-size: 1.5rem;
                         font-family: "Roboto Mono";
+
                         @media (max-width: 768px) {
                             font-size: 4vw;
                         }
@@ -312,15 +325,19 @@ html {
                     align-items: center;
                     justify-items: center;
 
-                    @media (max-width: 1080px) {
+                    @media (max-width: 1440px) {
                         grid-template-columns: 1fr 1fr 1fr;
+                    }
+
+                    @media (max-width: 1080px) {
+                        grid-template-columns: 1fr 1fr;
                     }
 
                     @media (max-width: 768px) {
                         grid-template-columns: 1fr 1fr;
                     }
 
-                    @media (max-width: 480px) {
+                    @media (max-width: 550px) {
                         grid-template-columns: 1fr;
                     }
 
@@ -328,7 +345,8 @@ html {
                         background-color: transparent;
                         border-radius: 0.5rem;
                         border: 1px solid $greenLight;
-                        perspective: 100rem; /* Remove this if you don't want the 3D effect */
+                        perspective: 80rem;
+                        /* Remove this if you don't want the 3D effect */
 
                         .flip-card-inner {
                             position: relative;
@@ -339,51 +357,58 @@ html {
                             .flip-card-front,
                             .flip-card-back {
                                 position: absolute;
+                                backface-visibility: hidden;
                                 -webkit-backface-visibility: hidden;
                                 -moz-backface-visibility: hidden;
-                                backface-visibility: hidden;
                             }
 
                             .flip-card-back {
+                                color: $blueDarkest;
                                 background-color: $blueLight;
                                 transform: rotateY(180deg);
 
-                                .project-details {
-                                    padding: 0.5rem;
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: space-between;
+                                // padding: 0.5rem;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
 
-                                    h1 {
-                                        color: $blueDarkest;
-                                        font-size: 2rem;
-                                        line-height: 0;
-                                        &:hover {
-                                            animation: shake 0.5sec;
-                                        }
-                                    }
+                                a {
+                                    text-decoration: none;
+                                    color: unset;
+                                }
 
-                                    p {
-                                        text-align: justify;
-                                        font-weight: 500;
+                                h1 {
+                                    font-size: 2rem;
+                                    line-height: 0;
+                                    margin-top: 3rem;
+                                }
+
+                                p {
+                                    font-weight: 400;
+                                    margin: 0 1rem;
+
+                                    @media (max-with: 370px) {
                                         font-size: 0.9rem;
                                     }
+                                }
 
-                                    ul.tags {
-                                        margin: 0;
-                                        padding: 0;
-                                        margin-bottom: 1rem !important;
-                                        list-style: none;
-                                        display: block;
+                                ul.tags {
+                                    margin: 0;
+                                    padding: 0;
+                                    margin-bottom: 2rem !important;
+                                    list-style: none;
+                                    display: block;
 
-                                        li {
-                                            display: inline;
-                                            background-color: $blueDarkest;
-                                            color: $blueLightest;
-                                            font-size: x-small;
-                                            padding: 0.2rem 0.5rem;
-                                            border-radius: 0.7rem;
-                                        }
+                                    li {
+                                        display: inline;
+                                        background-color: $blueDarkest;
+                                        color: $blueLightest;
+                                        font-family: 'Roboto Mono';
+                                        font-size: 0.75rem;
+                                        padding: 0.2rem 0.5rem;
+                                        margin: 0.1rem 0.1rem;
+                                        border-radius: 0.7rem;
+                                        box-shadow: 0 0 2px $darkestGrey;
                                     }
                                 }
                             }
@@ -397,12 +422,16 @@ html {
                     .flip-card,
                     .flip-card-inner,
                     .flip-card-front,
-                    .flip-card-front img,
                     .flip-card-back,
-                    .project-details {
+                    .flip-card-front img {
                         border-radius: 0.5rem;
-                        height: 18rem;
-                        width: 18rem;
+                        height: 20rem;
+                        width: 20rem;
+
+                        @media (max-width: 360px) {
+                            height: 17rem;
+                            width: 17rem;
+                        }
                     }
                 }
             }
@@ -423,9 +452,11 @@ html {
                     padding: 2rem;
                     z-index: 10;
                     position: relative;
+
                     @media (max-width: 768px) {
                         padding: 1rem;
                     }
+
                     @media (max-width: 480px) {
                         padding: 0.5rem;
                     }
@@ -498,6 +529,7 @@ html {
                     font-weight: 900;
                     line-height: 0;
                     margin-top: 4rem;
+
                     @media (max-width: 480px) {
                         font-size: 2rem;
                         margin-top: 3rem;
@@ -508,6 +540,7 @@ html {
                     background-color: $blueLight;
                     border-radius: 0.5rem;
                     padding: 2rem;
+
                     @media (max-width: 768px) {
                         padding: 1rem;
                     }
@@ -623,7 +656,7 @@ html {
                 .links {
                     align-self: center;
 
-                    button > a > img {
+                    button>a>img {
                         background-color: $orangeDarkest;
                         border: unset;
                     }
@@ -652,9 +685,11 @@ html {
                         width: 15rem;
                         border-radius: 0.5rem;
                         justify-self: center;
+
                         @media (max-width: 768px) {
                             align-self: center;
                         }
+
                         &:hover {
                             transform: scale(1.01) rotate(-1deg);
                             box-shadow: 1px 1px 0.5rem $orangeLight;
@@ -666,6 +701,7 @@ html {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
+
                         @media (max-width: 768px) {
                             justify-content: unset;
                             text-align: center;
@@ -684,6 +720,7 @@ html {
 
                         .content-value {
                             @extend .select;
+
                             a {
                                 text-decoration: none;
                                 color: unset;
