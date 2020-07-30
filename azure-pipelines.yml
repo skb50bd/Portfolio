@@ -25,13 +25,27 @@ steps:
 - script: sass ./src/style/style.scss:./src/css/style.css --no-source-map
   displayName: 'npm compile scss'
 
+- task: CopyFiles@2
+  inputs:
+    Contents: |
+      src\**
+      !src\style\**
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/dist'
+    CleanTargetFolder: true
+
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)/dist'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
+
+- task: DeleteFiles@1
+  inputs:
+    SourceFolder: '$(Build.ArtifactStagingDirectory)/dist'
+    Contents: '**'
+    RemoveSourceFolder: true
 
 - task: PublishBuildArtifacts@1
   inputs:
