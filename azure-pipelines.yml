@@ -22,7 +22,7 @@ steps:
 - script: npm install -g sass
   displayName: 'npm install sass'
 
-- script: sass scss:css
+- script: sass ./src/style/style.scss:./src/css/style.css --no-source-map
   displayName: 'npm compile scss'
 
 - task: ArchiveFiles@2
