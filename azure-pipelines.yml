@@ -10,8 +10,31 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+
+
+- task: UseNode@1
+  inputs:
+    checkLatest: true
+
+- script: npm install
+  displayName: 'npm install'
+
+- script: npm install -g sass
+  displayName: 'npm install sass'
+
+- script: sass scss:css
+  displayName: 'npm compile scss'
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
 - task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
