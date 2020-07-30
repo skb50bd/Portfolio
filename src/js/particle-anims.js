@@ -1,3 +1,6 @@
+import { introParticlesConfig } from "./intro-particles.js"; 
+import { skillParticlesConfig } from "./skill-particles.js"; 
+
 const adjustParticlesCanvasHeight = divId => {
     const canvas = document.querySelector(`#${divId}>canvas`);
     canvas.style.height = canvas.parentElement.parentElement.clientHeight + "px";
@@ -15,15 +18,15 @@ export const adjustCanvasHeights = () => {
 }
 
 export const mountSkillParticles = () => 
-    particlesJS.load(
+    particlesJS(
         "skill-particles",
-        'js/skill-particles.json', 
+        skillParticlesConfig, 
         adjustSkillParticlesCanvasHeight);
 
 export const mountIntroParticles = () => 
-    particlesJS.load(
+    particlesJS(
         "intro-particles",
-        'js/intro-particles.json',
+        introParticlesConfig,
         adjustIntroParticlesCanvasHeight);
 
 const removeParticles = divId =>
