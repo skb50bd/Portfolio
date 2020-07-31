@@ -66,6 +66,7 @@ const observer = new IntersectionObserver(entries => {
             if (id === "skills" && !animatingSkills) {
                 resetSkillsProgress();
                 writeSkillLevels();
+                adjustCanvasHeights();
             }
         } else {
             document.querySelector(`nav li a[href="#${id}"]`).classList.remove('active');
