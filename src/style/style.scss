@@ -378,10 +378,9 @@ html {
                                     color: unset;
 
                                     small {
-                                        background-color: $greenDarkest;
-                                        color: $greenLight;
-                                        padding: 0.1rem 0.3rem 0.2rem 0.3rem;
+                                        padding: 0.2rem 0.3rem;
                                         border-radius: 0.2rem;
+                                        border: 1px solid $greenDarkest;
                                     }
                                 }
 
@@ -548,14 +547,6 @@ html {
                         font-size: 2rem;
                         margin-top: 3rem;
                     }
-                }
-
-                .sub-section-header > span {
-                    color: $blueLightest;
-                    background-color: $blueDarkest;
-                    padding: 0.1rem 0.6rem 0.2rem 0.6rem;
-                    margin: 0;
-                    border-radius: 0.5rem;
                 }
 
                 .card {
