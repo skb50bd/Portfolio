@@ -227,6 +227,7 @@ html {
                     min-height: 25rem;
                     display: flex;
                     flex-direction: column;
+                    flex-wrap: nowrap;
                     align-items: center;
                     justify-content: center;
                     z-index: 10;
@@ -381,6 +382,10 @@ html {
                                     font-size: 2rem;
                                     line-height: 0;
                                     margin-top: 3rem;
+                                    font-weight: 800;
+                                    &:hover {
+                                        animation: shake 0.5s;
+                                    }
                                 }
 
                                 p {
@@ -408,7 +413,6 @@ html {
                                         padding: 0.2rem 0.5rem;
                                         margin: 0.1rem 0.1rem;
                                         border-radius: 0.7rem;
-                                        box-shadow: 0 0 2px $darkestGrey;
                                     }
                                 }
                             }
@@ -530,6 +534,10 @@ html {
                     line-height: 0;
                     margin-top: 4rem;
 
+                    &:hover {
+                        animation: shake 0.5s;
+                    }
+                    
                     @media (max-width: 480px) {
                         font-size: 2rem;
                         margin-top: 3rem;
@@ -574,6 +582,10 @@ html {
                     a {
                         text-decoration: none;
                         color: $darkGrey1;
+                        display: flex;
+                        flex-direction: row;
+                        align-content: center;
+                        flex-wrap: wrap;
                     }
 
                     span {
@@ -693,6 +705,7 @@ html {
                         &:hover {
                             transform: scale(1.01) rotate(-1deg);
                             box-shadow: 1px 1px 0.5rem $orangeLight;
+                            animation: shake 0.5s;
                         }
                     }
 
@@ -710,6 +723,7 @@ html {
 
                         .content-name {
                             font-size: large;
+                            font-weight: 600;
                             color: $orangeDarkest;
                             margin-top: 0.5rem;
 
