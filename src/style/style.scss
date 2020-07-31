@@ -746,8 +746,17 @@ html {
 
                 #footer-copyright {
                     text-align: center;
-                    margin-top: 2rem;
                     color: $orangeDarkest;
+                    
+                    #heart {
+                        line-height: 3rem;
+                        height: 3rem;
+                        
+                        &:hover {
+                            display: inline-block;
+                            font-size: 1.5rem;
+                        }
+                    }
                 }
             }
         }
