@@ -53,7 +53,7 @@ $orangeDarkest: #870000;
 }
 
 .select {
-    -webkit-touch-callout: text;
+    -webkit-touch-callout: default;
     -webkit-user-select: text;
     -khtml-user-select: text;
     -moz-user-select: text;
@@ -262,7 +262,7 @@ html {
                     #name {
                         font-weight: 500;
                         font-size: 5rem;
-                        line-height: 0rem;
+                        line-height: 0;
                         margin-top: 3rem;
                         margin-bottom: 3rem;
                         text-transform: uppercase;
