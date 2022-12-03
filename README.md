@@ -5,10 +5,10 @@ A simple portfolio website for a software engineer.
 
 ###### Publish 
 ```shell
-docker build -t skb50bd/portfolio:v1 .
+docker build -t skb50bd/portfolio:v2 .
 ```
 
 ###### Run 
 ```shell 
-docker run -t -i -d -p 80:80 -p 443:443 --name shakib-portfolio --restart unless-stopped skb50bd/portfolio:v1
+docker run -t -i -d -p 80:80 -p 443:443 --name shakib-portfolio --restart unless-stopped skb50bd/portfolio:v2
 ```

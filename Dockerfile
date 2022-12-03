@@ -1,18 +1,19 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+﻿FROM mcr.microsoft.com/dotnet/aspnet:7.0-alpine AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0-alpine AS build
 WORKDIR /src
 COPY ["Portfolio.Server/Portfolio.Server.csproj", "Portfolio.Server/"]
 RUN dotnet restore "Portfolio.Server/Portfolio.Server.csproj"
 COPY . .
-WORKDIR "/src/Portfolio.Server"
-RUN dotnet build "Portfolio.Server.csproj" -c Release -o /app/build
+WORKDIR /src
+RUN ls .
+RUN dotnet build "Portfolio.Server/Portfolio.Server.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Portfolio.Server.csproj" -c Release -o /app/publish
+RUN dotnet publish "Portfolio.Server/Portfolio.Server.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
