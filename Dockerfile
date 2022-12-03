@@ -3,7 +3,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0-alpine AS build
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["Portfolio.Server/Portfolio.Server.csproj", "Portfolio.Server/"]
 RUN dotnet restore "Portfolio.Server/Portfolio.Server.csproj"
