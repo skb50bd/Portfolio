@@ -516,6 +516,97 @@ html {
             }
         }
       }
+
+      section#experience {
+        div.container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          div.section-hero {
+            h2 {
+              font-size: 64px;
+              font-weight: 600;
+              line-height: 120%;
+              width: 380px;
+              margin-top: 0;
+            }
+
+            a.button {
+              text-decoration: none;
+              color: $lightThemeTextColor;
+              background-color: unset;
+              border: 1px solid $lightThemeTextColor;
+              border-radius: 2px;
+              padding: 16px 32px;
+              transition: all 50ms ease-in-out;
+              line-height: 150%;
+              font-weight: 600;
+              font-size: 16px;
+
+              &:hover {
+                background-color: $lightThemeTextColor;
+                color: $lightThemeBgColor;
+              }
+            }
+          }
+
+          div.experience-list {
+            table {
+              border-collapse: collapse;
+              tbody {
+                tr {
+                  &:first-child{
+                    border-top: 1px solid $lightThemeSecondaryColor;
+                  }
+
+                  border-bottom: 1px solid $lightThemeSecondaryColor;
+
+                  td {
+                    padding: 16px;
+                    vertical-align: middle;
+                  }
+
+                  td.company {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 100%;
+                    min-width: 160px;
+                  }
+
+                  td.details {
+                    span {
+                      display: block;
+                    }
+
+                    h6.duration {
+                      margin: 24px 0;
+                      font-size: 14px;
+                      font-weight: 400;
+                      line-height: 100%;
+                    }
+
+                    h4.designation {
+                      margin: 16px 0;
+                      display: block;
+                      font-size: 20px;
+                      font-weight: 700;
+                      line-height: 100%;
+                    }
+
+                    p.description {
+                      margin: 0 0 24px 0;
+                      font-size: 16px;
+                      font-weight: 400;
+                      line-height: 150%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
