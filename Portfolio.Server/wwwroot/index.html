@@ -17,34 +17,33 @@
 </head>
 
 <body>
-    <div id="hero">
-        <div class="nav">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="#intro">
-                        <img src="assets/avatar-bw-st.jpeg" alt="Shakib Haris" />
-                    </a>
-                </div>
+    <div class="nav">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="#intro">
+                    <img src="assets/avatar-bw-st.jpeg" alt="Shakib Haris" />
+                </a>
+            </div>
 
-                <ul class="navlinks">
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <!-- <li><a href="#contact">Blog</a></li> -->
-                </ul>
+            <ul class="navlinks">
+                <li><a class="nav-link" href="#intro">Intro</a></li>
+                <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#skills">Skills</a></li>
+                <li><a class="nav-link" href="#experience">Experience</a></li>
+            </ul>
 
-                <div class="contact">
-                    <a href="#contact" role="button" class="button">
-                        Contact
-                        <span class="material-symbols-outlined">
-                            line_end_arrow_notch
-                        </span>
-                    </a>
-                </div>
+            <div class="contact">
+                <a href="#contact" role="button" class="nav-link button">
+                    Contact
+                    <span class="material-symbols-outlined">
+                        line_end_arrow_notch
+                    </span>
+                </a>
             </div>
         </div>
+    </div>
 
+    <main>
         <section id="intro">
             <div class="content">
                 <div class="details">
@@ -53,7 +52,7 @@
 
                     <h2>
                         <span class="material-symbols-outlined">
-                            line_start
+                            horizontal_rule
                         </span>
                         .NET Developer
                     </h2>
@@ -85,257 +84,260 @@
                 </div>
             </div>
         </section>
-    </div>
 
-    <main>
         <section id="projects">
-            <h3 class="section-header">
-                Projects
-            </h1>
+            <div class="content">
+                <h3 class="section-header">
+                    Projects
+                </h1>
 
-            <div id="project-list">
-                <div class="card">
-                    <div class="project-details">
-                        <div class="details">
-                            <h1>
-                                Explosm Scraper
-                            </h1>
+                <div id="project-list">
+                    <div class="card">
+                        <div class="project-details">
+                            <div class="details">
+                                <h1>
+                                    Explosm Scraper
+                                </h1>
 
+                                <p>
+                                    Explosm Scraper is a web scraper that scrapes the latest comics from the Explosm website.
+                                </p>
+
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Role</th>
+                                            <td>Development</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Release</th>
+                                            <td>2020</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <a role="button"
+                                    href="https://github.com/skb50bd/explosmscrapper"
+                                    target="_blank"
+                                    class="button">
+                                    View Project
+                                </a>
+                            </div>
+                            <div class="image">
+                                <img src="https://images.unsplash.com/photo-1519563552094-a0f48181d523?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                                    alt="Explosm Scraper" />
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
                             <p>
-                                Explosm Scraper is a web scraper that scrapes the latest comics from the Explosm website.
+                                &nbsp;&nbsp;"Shakib is a great developer. He is very professional and has a great work ethic. He is
+                                very
+                                knowledgeable and has a great understanding of the technologies he works with. I would
+                                highly
+                                recommend him."
                             </p>
 
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>Role</th>
-                                        <td>Development</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Release</th>
-                                        <td>2020</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <a role="button"
-                                href="https://github.com/skb50bd/explosmscrapper"
-                                target="_blank"
-                                class="button">
-                                View Project
+                            <a class="author"
+                                href="https://linkedin.com/in/sktbd75"
+                                target="_blank">
+                                <img src="assets/soikat.jpeg" alt="Soikat Hossain" />
+                                <div class="author-details">
+                                    <h3>
+                                        Soikat Hossain
+                                    </h3>
+                                    <span>
+                                        Product Designer
+                                    </span>
+                                </div>
                             </a>
                         </div>
-                        <div class="image">
-                            <img src="https://images.unsplash.com/photo-1519563552094-a0f48181d523?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-                                alt="Explosm Scraper" />
-                        </div>
                     </div>
 
-                    <div class="testimonial">
-                        <p>
-                            &nbsp;&nbsp;"Shakib is a great developer. He is very professional and has a great work ethic. He is
-                            very
-                            knowledgeable and has a great understanding of the technologies he works with. I would
-                            highly
-                            recommend him."
-                        </p>
+                    <div class="card">
+                        <div class="project-details">
+                            <div class="details">
+                                <h1>
+                                    EMRG
+                                </h1>
 
-                        <a class="author"
-                            href="https://linkedin.com/in/sktbd75"
-                            target="_blank">
-                            <img src="assets/soikat.jpeg" alt="Soikat Hossain" />
-                            <div class="author-details">
-                                <h3>
-                                    Soikat Hossain
-                                </h3>
-                                <span>
-                                    Product Designer
-                                </span>
+                                <p>
+                                    EMRG is a University Management System that helps universities manage their students, courses,
+                                </p>
+
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Role</th>
+                                            <td>Development</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Release</th>
+                                            <td>2020</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <a role="button"
+                                    href="https://github.com/skb50bd/emrg"
+                                    target="_blank"
+                                    class="button">
+                                    View Project
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="project-details">
-                        <div class="details">
-                            <h1>
-                                EMRG
-                            </h1>
-
+                            <div class="image">
+                                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                                    alt="Explosm Scraper" />
+                            </div>
+                        </div>
+                        <div class="testimonial">
                             <p>
-                                EMRG is a University Management System that helps universities manage their students, courses,
+                                &nbsp;&nbsp;
+                                "EMRG is a University Management System
+                                that helps universities manage their students,
+                                courses, and faculties.
+                                It is super useful and easy to use.
+                                Our University students and faculties love it."
                             </p>
 
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>Role</th>
-                                        <td>Development</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Release</th>
-                                        <td>2020</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <a role="button"
-                                href="https://github.com/skb50bd/emrg"
-                                target="_blank"
-                                class="button">
-                                View Project
+                            <a class="author"
+                                href="https://www.linkedin.com/in/shahed45bd/"
+                                target="_blank">
+                                <img src="assets/shahed.jpg" alt="Soikat Hossain" />
+                                <div class="author-details">
+                                    <h3>
+                                        Shahed Hossain
+                                    </h3>
+                                    <span>
+                                        Senior Product Designer
+                                    </span>
+                                </div>
                             </a>
                         </div>
-
-                        <div class="image">
-                            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-                                alt="Explosm Scraper" />
-                        </div>
-                    </div>
-                    <div class="testimonial">
-                        <p>
-                            &nbsp;&nbsp;
-                            "EMRG is a University Management System
-                            that helps universities manage their students,
-                            courses, and faculties.
-                            It is super useful and easy to use.
-                            Our University students and faculties love it."
-                        </p>
-
-                        <a class="author"
-                            href="https://www.linkedin.com/in/shahed45bd/"
-                            target="_blank">
-                            <img src="assets/shahed.jpg" alt="Soikat Hossain" />
-                            <div class="author-details">
-                                <h3>
-                                    Shahed Hossain
-                                </h3>
-                                <span>
-                                    Senior Product Designer
-                                </span>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="skills">
-            <h3 class="section-header">
-                Tech Stacks
-            </h3>
+            <div class="content">
+                <h3 class="section-header">
+                    Tech Stacks
+                </h3>
 
-            <div id="skill-list">
-                <div class="skill-card">
-                    <span class="skill-logo">C#</span>
-                    <h4>C#</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
-                    </p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-logo">F#</span>
-                    <h4>F#</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
-                    </p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-logo">JS</span>
-                    <h4>JavaScript</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
-                    </p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-logo">HTML5</span>
-                    <h4>HTML5</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
-                    </p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-logo">CSS3</span>
-                    <h4>C#</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
-                    </p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-logo">Web</span>
-                    <h4>Web</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
-                    </p>
-                </div>
-                <div class="skill-card">
-                    <span class="skill-logo">Desktop</span>
-                    <h4>Desktop</h4>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
-                    </p>
+                <div id="skill-list">
+                    <div class="skill-card">
+                        <span class="skill-logo">C#</span>
+                        <h4>C#</h4>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
+                        </p>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-logo">F#</span>
+                        <h4>F#</h4>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
+                        </p>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-logo">JS</span>
+                        <h4>JavaScript</h4>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
+                        </p>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-logo">HTML5</span>
+                        <h4>HTML5</h4>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
+                        </p>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-logo">CSS3</span>
+                        <h4>C#</h4>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
+                        </p>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-logo">Web</span>
+                        <h4>Web</h4>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
+                        </p>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-logo">Desktop</span>
+                        <h4>Desktop</h4>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium itaque explicabo excepturi, inventore magni dolor maiores qui eum similique veniam facere accusantium ab corporis consectetur, doloribus placeat quis recusandae doloremque.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="experience">
-            <h3 class="section-header">
-                Experience
-            </h3>
+            <div class="content">
+                <h3 class="section-header">
+                    Experience
+                </h3>
 
-            <div class="container">
-                <div class="section-hero">
-                    <h2>
-                        Over 5 years of experience
-                    </h2>
-                    <a href="https://www.linkedin.com/in/skb50bd/"
-                       target="_blank"
-                       class="button">
-                        Get in touch
-                    </a>
-                </div>
+                <div class="container">
+                    <div class="section-hero">
+                        <h2>
+                            Over 5 years of experience
+                        </h2>
+                        <a href="https://www.linkedin.com/in/skb50bd/"
+                        target="_blank"
+                        class="button">
+                            Get in touch
+                        </a>
+                    </div>
 
-                <div class="experience-list">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td class="company">Chaldal Limited</td>
-                                <td class="details">
-                                    <h6 class="duration">2019 - Present</h6>
-                                    <h4 class="designation">Software Engineer</h4>
-                                    <p class="description">
-                                        Our technology drives supply chains, connects farmers and supports refugee camps.
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="company">Aeonic Technology</td>
-                                <td class="details">
-                                    <h6 class="duration">Apr - Jul 2021</h6>
-                                    <h4 class="designation">Full Stack Developer</h4>
-                                    <p class="description">
-                                        Aeonic Technology is a software development company that provides software
-                                        development services to clients in the United States and Europe.
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="company">Freelancing</td>
-                                <td class="details">
-                                    <h6 class="duration">2018 - 2019</h6>
-                                    <h4 class="designation">Full Stack Developer</h4>
-                                    <p class="description">
-                                        I have been working as a freelancer for 2 years. I have worked with
-                                        clients from all over the world.
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="experience-list">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="company">Chaldal Limited</td>
+                                    <td class="details">
+                                        <h6 class="duration">2019 - Present</h6>
+                                        <h4 class="designation">Software Engineer</h4>
+                                        <p class="description">
+                                            Our technology drives supply chains, connects farmers and supports refugee camps.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="company">Aeonic Technology</td>
+                                    <td class="details">
+                                        <h6 class="duration">Apr - Jul 2021</h6>
+                                        <h4 class="designation">Full Stack Developer</h4>
+                                        <p class="description">
+                                            Aeonic Technology is a software development company that provides software
+                                            development services to clients in the United States and Europe.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="company">Freelancing</td>
+                                    <td class="details">
+                                        <h6 class="duration">2018 - 2019</h6>
+                                        <h4 class="designation">Full Stack Developer</h4>
+                                        <p class="description">
+                                            I have been working as a freelancer for 2 years. I have worked with
+                                            clients from all over the world.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-
             <!-- <div id="education">
                 <h2 class="sub-section-header">
                     <span>Education</span>
@@ -369,55 +371,52 @@
         </section>
 
         <section id="contact">
-            <h3 class="section-header">
-                Contact
-            </h3>
+            <div class="content">
+                <div class="section-hero">
+                    <h2>
+                        Let's build next big thing together
+                    </h2>
 
-            <div class="contact-container">
-                <img src="assets/avatar-contact-sf.jpeg" alt="Shakib Haris" height="100">
-                <div class="content">
-                    <span class="content-name">Name</span>
-                    <span class="content-value">Shakib Haris</span>
+                    <h4>Find me on</h4>
 
-                    <span class="content-name">Location</span>
-                    <span class="content-value">Dhaka, Bangladesh</span>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/skb50bd/" target="_blank">
+                            <img src="assets/linkedin.svg" alt="LinkedIn">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/skb50bd/" target="_blank">
+                            <img src="assets/github.svg" alt="GitHub">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="submit-form.php" method="POST">
+                        <div class="form-group">
+                        <input type="text" id="fullName" name="fullName" required>
+                        <label for="fullName">Full Name</label>
+                        </div>
+
+                        <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                        </div>
+
+                        <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                        </div>
+
+                        <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Message</label>
+                        </div>
+
+                        <button type="submit" class="button">Submit</button>
+                    </form>
                 </div>
             </div>
-
-            <div class="links">
-                <button>
-                    <a href="https://bd.linkedin.com/in/skb50bd" target="_blank">
-                        <img src="assets/linkedin.svg" />
-                    </a>
-                </button>
-
-                <button>
-                    <a href="https://github.com/skb50bd" target="_blank">
-                        <img src="assets/github.svg" />
-                    </a>
-                </button>
-
-                <button>
-                    <a href="https://dev.azure.com/brotal" target="_blank">
-                        <img src="assets/azure-devops.svg" />
-                    </a>
-                </button>
-
-                <!-- <button>
-                    <a href="https://twitter.com/skb50bd" target="_blank">
-                        <img src="assets/twitter.svg" />
-                    </a>
-                </button> -->
-
-                <button><a href="https://fb.com/skb50bd" target="_blank">
-                        <img src="assets/facebook.svg" />
-                    </a>
-                </button>
-            </div>
-
-            <span id="footer-copyright">
-                Made with <span id="heart">❤️</span> by <b>Shakib Haris</b> | ©2020
-            </span>
         </section>
     </main>
 
