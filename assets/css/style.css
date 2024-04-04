@@ -44,7 +44,7 @@ body {
     font-size: 16px;
     scroll-behavior: smooth;
     color: #999999;
-    background: #1f1f1f;
+    background: #000;
     line-height: 1.7;
     overflow-x: hidden;
     height: 100vh;
@@ -276,6 +276,10 @@ main.portfolio-main {
     transform: rotate(54deg) skew(-8deg, -39deg);
     margin-top: -5px;
     z-index: -1;
+}
+
+h2.email a {
+    color: #999;
 }
 
 /* 02 - Responsive Sidebar Menu */
@@ -831,18 +835,8 @@ body .body-overlay {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-}
-.home2-page .body-overlay,
-.home3-page .body-overlay {
-    opacity: 0.1;
-}
-.home1-page .body-overlay,
-.home4-page .body-overlay,
-.home5-page .body-overlay {
     opacity: 0.3;
 }
-
-
 
 /* 10 - About */
 .about-area {

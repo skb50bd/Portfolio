@@ -24,13 +24,14 @@
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
-    <video class="body-overlay" muted autoplay loop>
-        <source src="./assets/images/bg-video.mp4" type="video/mp4">
-    </video>
-
     <div class="page-loader">
         <div class="bounceball"></div>
     </div>
+
+    <!-- <div class="body-overlay"></div> -->
+    <!-- <video class="body-overlay" muted autoplay loop>
+        <source src="./assets/images/bg-video.mp4" type="video/mp4">
+    </video> -->
 
     <span class="icon-menu">
         <span class="bar"></span>
@@ -97,6 +98,9 @@
                         <a href="https://github.com/skb50bd"><i class="lab la-github"></i></a>
                     </li>
                     <li>
+                        <a href="https://skype.com/skb50bd"><i class="lab la-skype"></i></a>
+                    </li>
+                    <li>
                         <a href="https://twitter.com/skb50bd"><i class="lab la-twitter"></i></a>
                     </li>
                 </ul>
@@ -149,11 +153,11 @@
 
     <div class="left-sidebar">
         <div class="sidebar-header d-flex align-items-center justify-content-between">
-            <img src="./assets/images/logo.png" alt="Logo">
+            <img src="./assets/svg/logo.svg" alt="Logo">
             <span class="designation">.NET Dev, DevSecOps</span>
         </div>
-        <img class="me" src="./assets/images/me.jpg" alt="Me">
-        <h2 class="email">info@shakib.io</h2>
+        <img class="me" src="./assets/images/me.webp" alt="Me">
+        <h2 class="email"><a href="mailto:info@shakib.io">info@shakib.io</a></h2>
         <h2 class="address">Based in Dhaka, BD</h2>
         <p class="copyright">&copy; 2024 Shakib Haris. All Rights Reserved</p>
         <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
@@ -162,6 +166,9 @@
             </li>
             <li>
                 <a href="https://github.com/skb50bd"><i class="lab la-github"></i></a>
+            </li>
+            <li>
+                <a href="https://skype.com/skb50bd"><i class="lab la-skype"></i></a>
             </li>
             <li>
                 <a href="https://twitter.com/skb50bd"><i class="lab la-twitter"></i></a>
@@ -178,19 +185,22 @@
 
                 <div class="left-sidebar">
                     <div class="sidebar-header d-flex align-items-center justify-content-between">
-                        <img src="./assets/images/logo.png" alt="Logo">
+                        <img src="./assets/svg/logo.svg" alt="Logo">
                         <span class="designation">.NET Dev, DevSecOps</span>
                     </div>
-                    <img class="me" src="./assets/images/me.jpg" alt="Me">
-                    <h2 class="email"><a href="mailto:"></a></h2>
+                    <img class="me" src="./assets/images/me.webp" alt="Me">
+                    <h2 class="email"><a href="mailto:info@shakib.io">info@shakib.io</a></h2>
                     <h2 class="address">Based in Dhaka, BD</h2>
-                    <p class="copyright">&copy; 2024 Shakib haris. All Rights Reserved</p>
+                    <p class="copyright">&copy; 2024 Shakib Haris. All Rights Reserved</p>
                     <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
                         <li>
                             <a href="https://linkedin.com/in/skb50bd"><i class="lab la-linkedin"></i></a>
                         </li>
                         <li>
                             <a href="https://github.com/skb50bd"><i class="lab la-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://skype.com/skb50bd"><i class="lab la-skype"></i></a>
                         </li>
                         <li>
                             <a href="https://twitter.com/skb50bd"><i class="lab la-twitter"></i></a>
@@ -210,12 +220,14 @@
                                     <i class="las la-home"></i> Intro
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">
-                                    Hello! I am <span>Shakib</span>. <br/>
+                                    Hello! I am <span>Shakib</span>.
+                                </h1>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">
                                     .NET & DevOps Engineer
                                 </h1>
                             </div>
                             <p class="scroll-animation" data-animation="fade_from_bottom">
-                                Optimizing tech, securing systems – passion meets profession."
+                                Optimizing tech, securing systems – passion meets profession
                             </p>
                             <a href="#portfolio"
                                 class="go-to-project-btn scroll-to scroll-animation"
@@ -275,10 +287,10 @@
                                     <h2>Infrastructure Engineer</h2>
                                     <p>Chaldal Limited</p>
                                     <ul>
-                                        <li>Ensured Distributed On-Premises Network and Infrastructure Compliance for PCI DSS 4.0</li>
-                                        <li>Administered Infrastructure and Network with PfSense, MikroTik, Juniper software and devices and hardened for security and compliance.</li>
+                                        <li>Ensured distributed on-premises network and infrastructure compliance for PCI DSS 4.0</li>
+                                        <li>Administered network infrastructure with PfSense, MikroTik, Juniper software and devices and hardened for security and compliance.</li>
                                         <li>Administered Ubuntu, AlmaLinux, Windows Server, Rancher, Kubernetes, SecurityOnion, ElasticSearch, ElasticAlert, etc. systems.</li>
-                                        <li>Migrated of legacy monolith .NET Framework application to .NET 8, ensuring seamless performance and modern practices.</li>
+                                        <li>Migrated .NET Framework applications to .NET 8, ensuring seamless performance and modern practices.</li>
                                         <li>Oversight of build/release processes via Azure Pipelines.</li>
                                         <li>Regular maintenance of hosted build servers for optimized system performance.</li>
                                         <li>Transformation of system architecture by migrating stack from Service Fabric to Kubernetes.</li>
@@ -363,9 +375,12 @@
                             <div class="services-items">
                                 <div class="service-item scroll-animation" data-animation="fade_from_bottom">
                                     <i class="las la-code"></i>
-                                    <h2>.NET Fusion [C# & F#]</h2>
+                                    <h2>.NET Fusion</h2>
                                     <p>
-                                        Crafting unique, operable solutions with a touch of elegance through proficient utilization of .NET platforms. You name it, I create it!
+                                        Crafting unique, operable solutions with a touch of elegance through proficient utilization of .NET platforms.
+                                        You name it, I create it!
+                                        <br/>
+                                        C#, F#, ASP.NET Core, EF Core, Xamarin, WinForms, WPF, UWP, etc.
                                     </p>
                                     <span class="projects">9 Projects</span>
                                 </div>
@@ -403,9 +418,11 @@
                                 </div>
                                 <div class="service-item scroll-animation" data-animation="fade_from_bottom">
                                     <i class="las la-cloud"></i>
-                                    <h2>Cloud Navigator [CI/CD, IaC]</h2>
+                                    <h2>Cloud Navigator</h2>
                                     <p>
-                                        Journeying through the digital clouds, steering your tech ship through Continuous Integration / Continuous Delivery and Infrastructure as Code to faster and secure deployments.
+                                        Journeying through the digital clouds,
+                                        steering your tech ship through Continuous Integration (CI) / Continuous Delivery (CD)
+                                        and Infrastructure as Code (IaC) to faster and secure deployments.
                                     </p>
                                     <span class="projects">2 Projects</span>
                                 </div>
@@ -450,15 +467,6 @@
                                             <!-- <h1 class="percent">C#</h1> -->
                                         </div>
                                         <p class="name">C#</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
-                                    <div class="skill">
-                                        <div class="skill-inner">
-                                            <img src="./assets/svg/fsharp.svg" alt="F#">
-                                            <!-- <h1 class="percent">F#</h1> -->
-                                        </div>
-                                        <p class="name">F#</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
@@ -518,15 +526,6 @@
                                 <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
                                     <div class="skill">
                                         <div class="skill-inner">
-                                            <img src="./assets/svg/elastic-stack.svg" alt="Elastic Stack">
-                                            <!-- <h1 class="percent">Elastic Stack</h1> -->
-                                        </div>
-                                        <p class="name">Elastic Stack</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
-                                    <div class="skill">
-                                        <div class="skill-inner">
                                             <img src="./assets/svg/security-onion.svg" alt="SecurityOnion">
                                             <!-- <h1 class="percent">SecurityOnion</h1> -->
                                         </div>
@@ -536,46 +535,19 @@
                                 <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
                                     <div class="skill">
                                         <div class="skill-inner">
-                                            <img src="./assets/svg/windows-server2.svg" alt="Windows Server Administration">
-                                            <!-- <h1 class="percent">Windows Server</h1> -->
+                                            <img src="./assets/svg/sys-admin.svg" alt="System Administration">
+                                            <!-- <h1 class="percent">System Administration</h1> -->
                                         </div>
-                                        <p class="name">Windows Server</p>
+                                        <p class="name">System Administration</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
                                     <div class="skill">
                                         <div class="skill-inner">
-                                            <img src="./assets/svg/linux.svg" alt="Linux Administration">
-                                            <!-- <h1 class="percent">Linux</h1> -->
+                                            <img src="./assets/svg/network.svg" alt="Network Administration">
+                                            <!-- <h1 class="percent">Network Administration</h1> -->
                                         </div>
-                                        <p class="name">Linux Administration</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
-                                    <div class="skill">
-                                        <div class="skill-inner">
-                                            <img src="./assets/svg/mikrotik.svg" alt="MikroTik">
-                                            <!-- <h1 class="percent">MikroTik</h1> -->
-                                        </div>
-                                        <p class="name">MikroTik</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
-                                    <div class="skill">
-                                        <div class="skill-inner">
-                                            <img src="./assets/svg/pfsense.svg" alt="PfSense">
-                                            <!-- <h1 class="percent">PfSense</h1> -->
-                                        </div>
-                                        <p class="name">PfSense</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
-                                    <div class="skill">
-                                        <div class="skill-inner">
-                                            <img src="./assets/svg/juniper-networks.svg" alt="Juniper">
-                                            <!-- <h1 class="percent">Juniper</h1> -->
-                                        </div>
-                                        <p class="name">Juniper</p>
+                                        <p class="name">Network Administration</p>
                                     </div>
                                 </div>
                             </div>
@@ -599,8 +571,8 @@
                                 <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
                                     <div class="portfolio-item portfolio-full">
                                         <div class="portfolio-item-inner">
-                                            <a href="./assets/images/pathao-courier.png" data-lightbox="example-1">
-                                                <img src="./assets/images/pathao-courier.png" alt="Pathao Courier Plugin for NopCommerce">
+                                            <a href="./assets/images/pathao-courier.webp" data-lightbox="example-1">
+                                                <img src="./assets/images/pathao-courier.webp" alt="Pathao Courier Plugin for NopCommerce">
                                             </a>
 
                                             <ul class="portfolio-categories">
@@ -625,8 +597,8 @@
                                 <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
                                     <div class="portfolio-item portfolio-full">
                                         <div class="portfolio-item-inner">
-                                            <a href="./assets/images/khata.png" data-lightbox="example-1">
-                                                <img src="./assets/images/khata.png" alt="Khata">
+                                            <a href="./assets/images/khata.webp" data-lightbox="example-1">
+                                                <img src="./assets/images/khata.webp" alt="Khata">
                                             </a>
 
                                             <ul class="portfolio-categories">
@@ -638,6 +610,12 @@
                                                 </li>
                                                 <li>
                                                     <a href="https://dotnet.microsoft.com/en-us/apps/aspnet">ASP.NET Core</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://learn.microsoft.com/en-us/ef/core/">EF Core</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.microsoft.com/en-us/sql-server/sql-server-2022">MS SQL Server</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -651,8 +629,8 @@
                                 <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
                                     <div class="portfolio-item portfolio-full">
                                         <div class="portfolio-item-inner">
-                                            <a href="./assets/images/scroll.png" data-lightbox="example-1">
-                                                <img src="./assets/images/scroll.png" alt="Scroll: Product Magazine">
+                                            <a href="./assets/images/scroll.webp" data-lightbox="example-1">
+                                                <img src="./assets/images/scroll.webp" alt="Scroll: Product Magazine">
                                             </a>
 
                                             <ul class="portfolio-categories">
@@ -664,6 +642,12 @@
                                                 </li>
                                                 <li>
                                                     <a href="https://dotnet.microsoft.com/en-us/apps/aspnet">ASP.NET Core</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://learn.microsoft.com/en-us/ef/core/">EF Core</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://learn.microsoft.com/en-us/ef/core/">Postgres</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -677,8 +661,8 @@
                                 <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
                                     <div class="portfolio-item portfolio-full">
                                         <div class="portfolio-item-inner">
-                                            <a href="./assets/images/bdtaxcalc.png" data-lightbox="example-1">
-                                                <img src="./assets/images/bdtaxcalc.png" alt="An intuitive tax calculator for Bangladeshi Tax Payers">
+                                            <a href="./assets/images/bdtaxcalc.webp" data-lightbox="example-1">
+                                                <img src="./assets/images/bdtaxcalc.webp" alt="An intuitive tax calculator for Bangladeshi Tax Payers">
                                             </a>
 
                                             <ul class="portfolio-categories">
@@ -716,7 +700,7 @@
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Let's Work <span>Together!</span></h1>
                             </div>
                             <h3 class="scroll-animation" data-animation="fade_from_bottom">info@shakib.io</h3>
-                            <p id="required-msg">* Marked fields are required to fill.</p>
+                            <p id="required-msg">* Marked fields are required</p>
 
                             <form class="contact-form scroll-animation"
                                   data-animation="fade_from_bottom"
