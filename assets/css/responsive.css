@@ -84,7 +84,7 @@
         padding-top: 50px;
     }
 
-    .services-items {
+    /* .services-items {
         display: flex;
         gap: 15px;
     }
@@ -104,7 +104,7 @@
         font-size: 20px;
         top: 25px;
         right: 20px;
-    }
+    } */
     .pricing-table-items .pricing-table .theme-btn {
         padding: 11px 40px 10px 40px;
     }
@@ -244,13 +244,13 @@
         margin-right: 40px;
         margin-bottom: 20px;
     }
-    .services-items {
+    /* .services-items {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
     .services-items .service-item {
         width: 100%;
-    }
+    } */
 
     .blog-sidebar {
         margin-top: 50px;
@@ -296,9 +296,9 @@
     .resume-area .resume-content .resume-timeline .item {
         padding-left: 50px;
     }
-    .services-items {
+    /* .services-items {
         grid-template-columns: 1fr;
-    }
+    } */
     .portfolio-area {
         padding-top: 40px;
     }
