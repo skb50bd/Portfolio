@@ -663,6 +663,11 @@ h2.email a {
     color: var(--primary_color);
 }
 
+.blur {
+    background: rgba(128, 128, 128, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
 
 /* 06 - Left Sidebar */
 .left-sidebar {
@@ -684,6 +689,13 @@ h2.email a {
     border-radius: 30px;
     display: block;
     margin-bottom: 56px;
+    opacity: 0.8;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.left-sidebar > img.me:hover {
+    opacity: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .left-sidebar .sidebar-header {
     margin-bottom: 65px;
@@ -1998,4 +2010,16 @@ body .body-overlay {
 
 .global-color .setting-toggle i {
     animation: rotating 3s infinite linear !important;
+}
+
+.tool {
+    font-size: 10px;
+    font-weight: bold;
+    background: rgba(128, 128, 128, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: var(--primary_color);
+    padding: 2px 8px;
+    border-radius: 16px;
+    display: inline-block;
 }
