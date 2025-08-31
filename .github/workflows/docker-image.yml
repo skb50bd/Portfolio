@@ -44,6 +44,10 @@ jobs:
           type=semver,pattern={{version}}
           type=semver,pattern={{major}}.{{minor}}
           type=sha,prefix={{branch}}-
+        labels: |
+          org.opencontainers.image.title=Portfolio
+          org.opencontainers.image.description=Personal portfolio website
+          org.opencontainers.image.vendor=skb50bd
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
@@ -54,3 +58,9 @@ jobs:
         labels: ${{ steps.meta.outputs.labels }}
         cache-from: type=gha
         cache-to: type=gha,mode=max
+
+    - name: Make package public
+      if: github.event_name != 'pull_request'
+      run: |
+        echo "Making package public..."
+        gh api --method PUT /user/packages/container/portfolio/visibility -f visibility=public
